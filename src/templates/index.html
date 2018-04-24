@@ -44,27 +44,81 @@
     </nav>
 
     <header class="bg-secondary text-white">
-      <div class="container text-center">
+      <div class="container-fluid text-center">
         <h1>NBA Champion Forecaster</h1>
+        <h2>Who do you think will win?</h2>
         <p class="lead">Please make a selection:</p>
+<!--         <div class="row">
+          <div class="col-sm-1 offset-sm-2 p-0"><img src="../static/images/team_logos/boston-celtics-logo-vector.png" class="img-fluid img-thumbnail"></div>
+          <div class="col-sm-1 p-0"><img src="../static/images/team_logos/boston-celtics-logo-vector.png" class="img-fluid img-thumbnail"></div>
+          <div class="col-sm-1 p-0"><img src="../static/images/team_logos/boston-celtics-logo-vector.png" class="img-fluid img-thumbnail"></div>
+          <div class="col-sm-1 p-0"><img src="../static/images/team_logos/boston-celtics-logo-vector.png" class="img-fluid img-thumbnail"></div>
+          <div class="col-sm-1 p-0"><img src="../static/images/team_logos/boston-celtics-logo-vector.png" class="img-fluid img-thumbnail"></div>
+          <div class="col-sm-1 p-0"><img src="../static/images/team_logos/boston-celtics-logo-vector.png" class="img-fluid img-thumbnail"></div>
+          <div class="col-sm-1 p-0"><img src="../static/images/team_logos/boston-celtics-logo-vector.png" class="img-fluid img-thumbnail"></div>
+          <div class="col-sm-1 p-0"><img src="../static/images/team_logos/boston-celtics-logo-vector.png" class="img-fluid img-thumbnail"></div>
+        </div>
         <div class="row">
-          <div class="col-sm-1 offset-sm-2" style="border-style: solid; border-color: white; height: 80px"></div>
-          <div class="col-sm-1" style="border-style: solid; border-color: white; height: 80px"></div>
-          <div class="col-sm-1" style="border-style: solid; border-color: white; height: 80px"></div>
-          <div class="col-sm-1" style="border-style: solid; border-color: white; height: 80px"></div>
-          <div class="col-sm-1" style="border-style: solid; border-color: white; height: 80px"></div>
-          <div class="col-sm-1" style="border-style: solid; border-color: white; height: 80px"></div>
-          <div class="col-sm-1" style="border-style: solid; border-color: white; height: 80px"></div>
-          <div class="col-sm-1" style="border-style: solid; border-color: white; height: 80px"></div>
 
-          <div class="col-sm-1 offset-sm-2" style="border-style: solid; border-color: white; height: 80px"></div>
-          <div class="col-sm-1" style="border-style: solid; border-color: white; height: 80px"></div>
-          <div class="col-sm-1" style="border-style: solid; border-color: white; height: 80px"></div>
-          <div class="col-sm-1" style="border-style: solid; border-color: white; height: 80px"></div>
-          <div class="col-sm-1" style="border-style: solid; border-color: white; height: 80px"></div>
-          <div class="col-sm-1" style="border-style: solid; border-color: white; height: 80px"></div>
-          <div class="col-sm-1" style="border-style: solid; border-color: white; height: 80px"></div>
-          <div class="col-sm-1" style="border-style: solid; border-color: white; height: 80px"></div>
+          <div class="col-sm-1 offset-sm-2 p-0"><img src="../static/images/team_logos/boston-celtics-logo-vector.png" class="img-fluid img-thumbnail"></div>
+          <div class="col-sm-1 p-0"><img src="../static/images/team_logos/boston-celtics-logo-vector.png" class="img-fluid img-thumbnail"></div>
+          <div class="col-sm-1 p-0"><img src="../static/images/team_logos/boston-celtics-logo-vector.png" class="img-fluid img-thumbnail"></div>
+          <div class="col-sm-1 p-0"><img src="../static/images/team_logos/boston-celtics-logo-vector.png" class="img-fluid img-thumbnail"></div>
+          <div class="col-sm-1 p-0"><img src="../static/images/team_logos/boston-celtics-logo-vector.png" class="img-fluid img-thumbnail"></div>
+          <div class="col-sm-1 p-0"><img src="../static/images/team_logos/boston-celtics-logo-vector.png" class="img-fluid img-thumbnail"></div>
+          <div class="col-sm-1 p-0"><img src="../static/images/team_logos/boston-celtics-logo-vector.png" class="img-fluid img-thumbnail"></div>
+          <div class="col-sm-1 p-0"><img src="../static/images/team_logos/boston-celtics-logo-vector.png" class="img-fluid img-thumbnail"></div>
+        </div> -->
+
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <label class="btn btn-secondary active">
+            <input type="radio" name="options" id="option1" autocomplete="off" checked><img src="../static/images/team_logos/boston-celtics-logo-vector.png" class="img-fluid img-thumbnail">
+          </label>
+          <label class="btn btn-secondary">
+            <input type="radio" name="options" id="option2" autocomplete="off"><img src="../static/images/team_logos/cleveland-cavaliers-logo-vector.png" class="img-fluid img-thumbnail">
+          </label>
+          <label class="btn btn-secondary">
+            <input type="radio" name="options" id="option3" autocomplete="off"><img src="../static/images/team_logos/golden-state-warriors-logo-vector.png" class="img-fluid img-thumbnail">
+          </label>
+          <label class="btn btn-secondary">
+            <input type="radio" name="options" id="option4" autocomplete="off"><img src="../static/images/team_logos/houston-rockets-logo-vector.png" class="img-fluid img-thumbnail">
+          </label>
+          <label class="btn btn-secondary">
+            <input type="radio" name="options" id="option5" autocomplete="off"><img src="../static/images/team_logos/indiana-pacers-logo-vector.png" class="img-fluid img-thumbnail">
+          </label>
+          <label class="btn btn-secondary">
+            <input type="radio" name="options" id="option6" autocomplete="off"><img src="../static/images/team_logos/miami-heat-logo-vector.png" class="img-fluid img-thumbnail">
+          </label>
+          <label class="btn btn-secondary">
+            <input type="radio" name="options" id="option7" autocomplete="off"><img src="../static/images/team_logos/milwaukee-bucks-logo-vector.png" class="img-fluid img-thumbnail">
+          </label>
+          <label class="btn btn-secondary">
+            <input type="radio" name="options" id="option8" autocomplete="off"><img src="../static/images/team_logos/minnesota-timberwolves-logo-vector.png" class="img-fluid img-thumbnail">
+          </label>
+          <label class="btn btn-secondary">
+            <input type="radio" name="options" id="option9" autocomplete="off" checked><img src="../static/images/team_logos/new-orleans-pelicans-logo-vector.png" class="img-fluid img-thumbnail">
+          </label>
+          <label class="btn btn-secondary">
+            <input type="radio" name="options" id="option10" autocomplete="off"><img src="../static/images/team_logos/oklahoma-city-thunder-logo-vector.png" class="img-fluid img-thumbnail">
+          </label>
+          <label class="btn btn-secondary">
+            <input type="radio" name="options" id="option11" autocomplete="off"><img src="../static/images/team_logos/philadelphia-76ers-logo-vector.png" class="img-fluid img-thumbnail">
+          </label>
+          <label class="btn btn-secondary">
+            <input type="radio" name="options" id="option12" autocomplete="off"><img src="../static/images/team_logos/portland-trail-blazers-logo-vector.png" class="img-fluid img-thumbnail">
+          </label>
+          <label class="btn btn-secondary">
+            <input type="radio" name="options" id="option13" autocomplete="off"><img src="../static/images/team_logos/san-antonio-spurs-logo-vector.png" class="img-fluid img-thumbnail">
+          </label>
+          <label class="btn btn-secondary">
+            <input type="radio" name="options" id="option14" autocomplete="off"><img src="../static/images/team_logos/toronto-raptors-logo-vector.png" class="img-fluid img-thumbnail">
+          </label>
+          <label class="btn btn-secondary">
+            <input type="radio" name="options" id="option15" autocomplete="off"><img src="../static/images/team_logos/utah-jazz-logo-vector.png" class="img-fluid img-thumbnail">
+          </label>
+          <label class="btn btn-secondary">
+            <input type="radio" name="options" id="option16" autocomplete="off"><img src="../static/images/team_logos/washington-wizards-logo-vector.png" class="img-fluid img-thumbnail">
+          </label>
         </div>
 
       </div>
@@ -101,17 +155,7 @@
             </div>
           </section>
 
-          <section id="contact">
-            <div class="container">
-              <hr>
-              <div class="row">
-                <div class="col-lg-8 mx-auto">
-                  <h2>Contact us</h2>
-                  <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
-                </div>
-              </div>
-            </div>
-          </section>
+          
         </div>
 
         <div class="col-sm-4" style="border-style: solid; border-color: white white white grey">
@@ -126,6 +170,20 @@
             </div>
           </section>
 
+        </div>
+
+        <div class="col-sm-12">
+          <hr>
+          <section id="contact" class="pt-0">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8 mx-auto">
+                  <h2>Contact us</h2>
+                  <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
 
 
