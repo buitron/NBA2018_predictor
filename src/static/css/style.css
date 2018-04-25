@@ -93,3 +93,25 @@
 	color: white;
 
 }
+
+.btn img {
+	background-color: #333333;
+	opacity: 0.25;
+}
+
+.btn img:hover {
+	opacity: 1;
+}
+
+.btn img:active {
+	opacity: 0.5;
+}
+
+.btn {
+	background-color: #1a1a1a;
+}
+
+.btn:focus, .btn:active {
+	outline: none !important;
+	box-shadow: none;
+}
