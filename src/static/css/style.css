@@ -1,3 +1,5 @@
+/*team configurations*/
+
 #team.BOS {
 	background-color: #007A33;
 	color: white;
@@ -94,6 +96,9 @@
 
 }
 
+
+/*button functions*/
+
 .btn img {
 	background-color: #333333;
 	opacity: 0.25;
@@ -114,4 +119,16 @@
 .btn:focus, .btn:active {
 	outline: none !important;
 	box-shadow: none;
+}
+
+
+/*global styles*/
+
+#bodydiv {
+	background-color: #000000;
+	color: #FFFFFF;
+}
+
+hr {
+	background-color: grey;
 }
