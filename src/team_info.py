@@ -11,8 +11,8 @@ Team_info = Base.classes.team_info
 session = Session(engine)
 
 def team_info(team):
-	team = team.replace("_", " ")
-	queryExpression = session.query(Team_info.team
+	queryExpression = session.query(Team_info.team_abbrev
+							,Team_info.team
                             ,Team_info.conference
                             ,Team_info.division
                             ,Team_info.star_player
@@ -29,25 +29,25 @@ def team_info(team):
                             ,Team_info.assists_per_game
                             ,Team_info.steals_per_game
                             ,Team_info.blocks_per_game
-	).filter(Team_info.team == team).all()
+	).filter(Team_info.team_abbrev == team).all()
 
-	Team_info_dict = [{"Team": each[0],
-	"Conference": each[1],
-	"Division": each[2],
-	"Star Player": each[3],
-	"Head Coach": each[4],
-	"Playoff Seed": each[5],
-	"Regular Season Wins": each[6],
-	"Regular Season Losses": each[7],
-	"Win Percentage": float('{:2f}'.format(each[8])),
-	"Points Per Game": each[9],
-	"Field Goal Percentage": each[10],
-	"Three Point Percentage": each[11],
-	"Free Throw Percentage": each[12],
-	"Rebounds Per Game": each[13],
-	"Assists Per Game": each[14],
-	"Steals Per Game": each[15],
-	"Blocks Per Game": each[16]
+	Team_info_dict = [{"Team": each[1],
+	"Conference": each[2],
+	"Division": each[3],
+	"Star Player": each[4],
+	"Head Coach": each[5],
+	"Playoff Seed": each[6],
+	"Regular Season Wins": each[7],
+	"Regular Season Losses": each[8],
+	"Win Percentage": float('{:2f}'.format(each[9])),
+	"Points Per Game": each[10],
+	"Field Goal Percentage": each[11],
+	"Three Point Percentage": each[12],
+	"Free Throw Percentage": each[13],
+	"Rebounds Per Game": each[14],
+	"Assists Per Game": each[15],
+	"Steals Per Game": each[16],
+	"Blocks Per Game": each[17]
 	} for each in queryExpression]
 
-	return Team_info_dict
+	return Team_info_dict[0]
