@@ -12,7 +12,29 @@ jQuery(function ($) {
         }, function(data) {
 
         	// place to change Team Information
+            $('.lead').hide()
+            $('#team_name').text(data.Team)
 
+
+
+
+            $('#team_table').removeAttr('hidden')
+            $('#playoff_seed').text(data['Playoff Seed'])
+            $('#conference').text(data.Conference)
+            $('#division').text(data.Division)
+            $('#head_coach').text(data['Head Coach'])
+            $('#star_player').text(data['Star Player'])
+            $('#rs_season_wins').text(data['Regular Season Wins'])
+            $('#rs_season_losses').text(data['Regular Season Losses'])
+            $('#win_percentage').text(data['Win Percentage'])
+            $('#points_per_game').text(data['Points Per Game'])
+            $('#field_goal_percentage').text(data['Field Goal Percentage'])
+            $('#free_throw_percentage').text(data['Free Throw Percentage'])
+            $('#three_point_percentage').text(data['Three Point Percentage'])
+            $('#assists_per_game').text(data['Assists Per Game'])
+            $('#blocks_per_game').text(data['Blocks Per Game'])
+            $('#rebounds_per_game').text(data['Rebounds Per Game'])
+            $('#steals_per_game').text(data['Steals Per Game'])
 
 
         	console.log(data)

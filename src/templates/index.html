@@ -40,6 +40,9 @@
               <a class="nav-link js-scroll-trigger" href="#services">Team Info</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#live">Live Scores!</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
             </li>
           </ul>
@@ -85,7 +88,7 @@
             <div class="container">
               <div class="row">
                 <div class="col-lg-8 mx-auto">
-                  <h2>Forecast Results</h2>
+                  <h2 id="team_name">Forecast Results</h2>
                   <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -102,6 +105,68 @@
               <div class="row">
                 <div class="col-lg-8 mx-auto">
                   <h2>Team Information</h2>
+                  <div id="team_table" class="table-responive-md" hidden>
+                    <table class="table table-sm table-bordered">
+                      <thead class="thead-light">
+                        <th scope="col">Playoff Seed</th>
+                        <th scope="col">Conference</th>
+                        <th scope="col">Division</th>
+                        <th scope="col">Head Coach</th>
+                        <th scope="col">Star Player</th>
+                      </thead>
+                      <tbody>
+                        <td id="playoff_seed"></td>
+                        <td id="conference"></td>
+                        <td id="division"></td>
+                        <td id="head_coach"></td>
+                        <td id="star_player"></td>
+                      </tbody>
+                    </table>
+
+                    <table class="table table-sm table-bordered">
+                      <thead class="thead-light">
+                        <th scope="col">Regular Season Wins</th>
+                        <th scope="col">Regular Season Losses</th>
+                        <th scope="col">Win Percentage</th>
+                      </thead>
+                      <tbody>
+                        <td id="rs_season_wins"></td>
+                        <td id="rs_season_losses"></td>
+                        <td id="win_percentage"></td>
+                      </tbody>
+                    </table>
+
+                    <table class="table table-sm table-bordered">
+                      <thead class="thead-light">
+                        <th scope="col">Points Per Game</th>
+                        <th scope="col">Field Goal Percentage</th>
+                        <th scope="col">Free Throw Percentage</th>
+                        <th scope="col">Three Point Percentage</th>
+                      </thead>
+                      <tbody>
+                        <td id="points_per_game"></td>
+                        <td id="field_goal_percentage"></td>
+                        <td id="free_throw_percentage"></td>
+                        <td id="three_point_percentage"></td>
+                      </tbody>
+                    </table>
+
+                    <table class="table table-sm table-bordered">
+                      <thead class="thead-light">
+                        <th scope="col">Assists Per Game</th>
+                        <th scope="col">Blocks Per Game</th>
+                        <th scope="col">Rebounds Per Game</th>
+                        <th scope="col">Steals Per Game</th>
+                      </thead>
+                      <tbody>
+                        <td id="assists_per_game"></td>
+                        <td id="blocks_per_game"></td>
+                        <td id="rebounds_per_game"></td>
+                        <td id="steals_per_game"></td>
+                      </tbody>
+                    </table>
+                  </div>
+
                   <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
                 </div>
               </div>
