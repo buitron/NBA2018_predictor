@@ -1,0 +1,134 @@
+/*team configurations*/
+
+#team.BOS {
+	background-color: #007A33;
+	color: white;
+
+}
+
+#team.CLE {
+	background-color: #6F263D;
+	color: white;
+
+}
+
+#team.GSW {
+	background-color: #006BB6;
+	color: white;
+
+}
+
+#team.HOU {
+	background-color: #CE1141;
+	color: white;
+
+}
+
+#team.IND {
+	background-color: #002D62;
+	color: white;
+
+}
+
+#team.MIA {
+	background-color: #98002E;
+	color: white;
+
+}
+
+#team.MIL {
+	background-color: #00471B;
+	color: white;
+
+}
+
+#team.MIN {
+	background-color: #0C2340;
+	color: white;
+
+}
+
+#team.NOP {
+	background-color: #0C2340;
+	color: white;
+
+}
+
+#team.OKC {
+	background-color: #007AC1;
+	color: white;
+
+}
+
+#team.PHI {
+	background-color: #006BB6;
+	color: white;
+
+}
+
+#team.POR {
+	background-color: #E03A3E;
+	color: white;
+
+}
+
+#team.SAS {
+	background-color: #C4CED4;
+	color: black;
+
+}
+
+#team.TOR {
+	background-color: #CE1141;
+	color: white;
+
+}
+
+#team.UTA {
+	background-color: #002B5C;
+	color: white;
+
+}
+
+#team.WAS {
+	background-color: #002B5C;
+	color: white;
+
+}
+
+
+/*button functions*/
+
+.btn img {
+	background-color: #333333;
+	opacity: 0.25;
+}
+
+.btn img:hover {
+	opacity: 1;
+}
+
+.btn img:active {
+	opacity: 0.5;
+}
+
+.btn {
+	background-color: #1a1a1a;
+}
+
+.btn:focus, .btn:active {
+	outline: none !important;
+	box-shadow: none;
+}
+
+
+/*global styles*/
+
+#bodydiv {
+	background-color: #000000;
+	color: #FFFFFF;
+}
+
+hr {
+	background-color: grey;
+}
