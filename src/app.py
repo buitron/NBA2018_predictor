@@ -1,5 +1,6 @@
 from flask import Flask, render_template, jsonify, request, redirect
 from team_info import team_info
+from ml_random_forest import finals
 
 app = Flask(__name__)
 
@@ -18,13 +19,11 @@ def team_stats():
 	return jsonify(team_stats_dict)
 
 
-# @app.route('/prediction_stats')
-# def future():
-# 	team_name = request.args.get('team_name', type=str)
-#	future_stats_dict = finals(team_name)
-
-#	return jsonify(future_stats_dict)
-
+@app.route('/prediction_stats')
+def future():
+	# team_name = request.args.get('team_name', type=str)
+	future_stats_dict = finals()
+	return jsonify(future_stats_dict)
 
 if __name__ == '__main__':
     app.run(debug=True)
