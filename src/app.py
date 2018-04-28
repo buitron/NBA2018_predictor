@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, request, redirect
 from team_info import team_info
 
 app = Flask(__name__)
@@ -9,16 +9,22 @@ def index():
 
     return render_template('index.html')
 
-@app.route('/team_info/<team_abbrev>', methods=['POST'])
-if request.method == 'POST':
-	team_name = request.form['team_name']
-	# team_abbrev = team_name.val()
 
-def team_stats(team_abbrev):
+@app.route('/team_info')
+def team_stats():
+	team_name = request.args.get('team_name', type=str)
+	team_stats_dict = team_info(team_name)
 
-    team_stats_dict = team_info(team_abbrev)
+	return jsonify(team_stats_dict)
 
-    return jsonify(team_stats_dict[0])
+
+# @app.route('/prediction_stats')
+# def future():
+# 	team_name = request.args.get('team_name', type=str)
+#	future_stats_dict = finals(team_name)
+
+#	return jsonify(future_stats_dict)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
