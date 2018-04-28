@@ -25,8 +25,8 @@ for row in table:
             team_abr[row.a.text] = row.td.text
 
 
-############## random forest model with 2018 predictions and probabilities ###############
 
+############## random forest model with 2018 predictions and probabilities ###############
 
 def finals():
 	df = pd.read_csv('static/data/ML/comp_nba_stats_rs.csv')
