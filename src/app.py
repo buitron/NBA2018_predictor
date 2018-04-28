@@ -12,7 +12,8 @@ def index():
 
 @app.route('/live')
 def live():
-    return render_template('live.html')
+    lf = now_playing()
+    return render_template('live.html', lf=lf)
 
 
 @app.route('/team_info')

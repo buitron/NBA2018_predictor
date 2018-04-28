@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Live Score Tables for the 2018 NBA Playoffs">
+    <meta name="author" content="">
+
+    <title>NBA 2018 Playoffs Live Feed</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Font-Awesome CSS -->
+    <link href="{{ url_for('static', filename='vendor/fontawesome/css/fontawesome-all.css') }}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static', filename='css/scrolling-nav.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/live_style.css') }}" rel="stylesheet">
+</head>
+<body style="background-color: #000000;">
+    <div id="live_table" class="container table-responive-md">
+      <table class="table table-sm table-bordered">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">Home Team</th>
+            <th scope="col">Away Team</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-light">
+            <td id="playoff_seed">{{ lf[1]['hometeam_abbrev'] }}</td>
+            <td id="conference">{{ lf[1]['awayteam_abbrev'] }}</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+
+
+
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="{{ url_for('static', filename='vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    <script src="{{ url_for('static', filename='js/scrolling-nav.js') }}"></script>
+
+    <!-- Personal Custom JavaScript -->
+    <script src="{{ url_for('static', filename='js/live_script.js') }}"></script>
+
+    <script type="text/javascript">
+      $SCRIPT_ROOT = {{ request.script_root|tojson|safe }}
+    </script>
+</body>
+</html>
