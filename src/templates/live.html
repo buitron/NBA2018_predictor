@@ -35,11 +35,12 @@
                         <th scope="col" colspan="2">Game Clock: {{ l.game_clock }}</th>
                     </tr>
                     {% endif %}
-                    {% if l.duration %}
+                    {% if l.duration != '' %}
                     <tr class="text-center">
                         <th scope="col" colspan="2">Game Duration: {{ l.game_duration }}</th>
                     </tr>
-                    {% else %}
+                    {% endif %}
+                    {% if l.game_date %}
                     <tr class="text-center">
                         <th scope="col" colspan="2">Game Date: {{ l.game_date }}, Game Time: {{ l.game_time }}</th>
                     </tr>
