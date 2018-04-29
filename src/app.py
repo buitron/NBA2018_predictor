@@ -1,10 +1,8 @@
 from flask import Flask, render_template, jsonify, request, redirect
 from team_info import team_info
-<<<<<<< HEAD
 from ml_random_forest import finals
-=======
 from live_feed import now_playing
->>>>>>> 636db476ba7a9511e32b816f991837938ed5b3c8
+
 
 app = Flask(__name__)
 
