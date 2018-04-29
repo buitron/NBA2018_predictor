@@ -28,9 +28,10 @@ def team_stats():
 
 @app.route('/prediction_stats')
 def future():
-	# team_name = request.args.get('team_name', type=str)
-	future_stats_dict = finals()
-	return jsonify(future_stats_dict)
+    # team_name = request.args.get('team_name', type=str)
+    future_stats_dict = finals()
+    return jsonify(future_stats_dict)
+
 
 @app.route('/live_feed')
 def live_action():
