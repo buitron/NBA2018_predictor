@@ -36,7 +36,8 @@ def now_playing():
 
                 if game_clock != '':
                     live["game_clock"] = game_clock
-                elif game_duration != 'hrs, min':
+                
+                if game_duration != 'hrs, min':
                     live["game_duration"] = game_duration
                 else:
                     live["game_date"] = game_date
