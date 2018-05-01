@@ -6,6 +6,8 @@ jQuery(function ($) {
         $('#team').removeClass(previousClass).addClass($(this).val());
         previousClass = $(this).val();
 
+        location.href = "#about"
+
     	$.getJSON($SCRIPT_ROOT + '/team_info', {
         	team_name: $(this).val()
         }, function(data) {

@@ -50,14 +50,19 @@
       </div>
     </nav>
 
-    <header class="bg-secondary text-white">
-      <div class="container-fluid text-center">
+    <video autoplay muted loop id="myVideo">
+      <source src="{{ url_for('static', filename='video/nba_finals_promo.mp4') }}" type="video/mp4">
+    </video>
+
+
+    <header id="selection" class="text-white">
+      <div id="team_buttons" class="container-fluid text-center">
         <h1>NBA 2018 Champion Forecaster</h1>
         <h2>Who do you think will win?</h2>
-        <p class="lead">Please make a selection:</p>
+        <p>Please make a selection:</p>
 
         <div class="btn-group btn-group-sm" role="group">
-            <button type="button" class="btn" value="BOS"><img src="../static/images/team_logos/boston-celtics-logo-vector.png" class="img-fluid img-thumbnail">
+            <button type="button" class="btn" value="BOS" href="#team"><img src="../static/images/team_logos/boston-celtics-logo-vector.png" class="img-fluid img-thumbnail">
             <button type="button" class="btn" value="CLE"><img src="../static/images/team_logos/cleveland-cavaliers-logo-vector.png" class="img-fluid img-thumbnail">
             <button type="button" class="btn" value="GSW"><img src="../static/images/team_logos/golden-state-warriors-logo-vector.png" class="img-fluid img-thumbnail">
             <button type="button" class="btn" value="HOU"><img src="../static/images/team_logos/houston-rockets-logo-vector.png" class="img-fluid img-thumbnail">
@@ -181,6 +186,7 @@
                       </tbody>
                     </table>
 
+                    <h4>Fun Fact!</h4>
                     <p id="team_fact"></p>
                   </div>
 
@@ -193,7 +199,7 @@
 
         </div>
 
-        <div class="col-sm-4" style="border-style: solid; border-color: black black black grey">
+        <div id="live_score" class="col-sm-4" style="border-style: solid; border-color: black black black grey">
           <section id="live">
             <div class="container-fluid">
               <h2>Live Playoff Scoreboard</h2>
@@ -202,7 +208,7 @@
           </section>
 
         </div>
-        <div class="col-sm-12">
+        <div id="contact_us" class="col-sm-12">
           <hr class="mt-0">
           <section id="contact" class="">
             <div class="container">
@@ -257,7 +263,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="py-5 bg-dark">
+    <footer id="feet" class="py-5 bg-dark">
       <div class="container">
         <p class="m-0 text-center text-white">Copyright &copy; The Three Datateers 2018</p>
       </div>

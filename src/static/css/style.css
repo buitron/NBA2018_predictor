@@ -132,3 +132,25 @@
 hr {
 	background-color: grey;
 }
+
+#myVideo {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	z-index: -1;
+}
+
+#selection {
+	height: 100vh;
+}
+
+#team_buttons {
+	position: absolute;
+	bottom: 10%;
+	width: 80%;
+	left: 10%;
+}
+
+
