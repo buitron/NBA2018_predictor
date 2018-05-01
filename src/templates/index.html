@@ -10,6 +10,9 @@
 
     <title>NBA 2018 Champion Forecaster</title>
 
+    <!-- d3 javascript library -->
+    <script src="{{ url_for('static', filename='vendor/d3/d3.min.js') }}"></script>
+
     <!-- Bootstrap core CSS -->
     <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
@@ -19,6 +22,9 @@
     <!-- Custom styles for this template -->
     <link href="{{ url_for('static', filename='css/scrolling-nav.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+    <!-- favicon.ico bug fix -->
+    <link rel="shortcut icon" href="#">
 
   </head>
 
@@ -50,14 +56,19 @@
       </div>
     </nav>
 
-    <header class="bg-secondary text-white">
-      <div class="container-fluid text-center">
+    <video autoplay muted loop id="myVideo">
+      <source src="{{ url_for('static', filename='video/nba2018_playoffs_promo.mp4') }}" type="video/mp4">
+    </video>
+
+
+    <header id="selection" class="text-white">
+      <div id="team_buttons" class="container-fluid text-center">
         <h1>NBA 2018 Champion Forecaster</h1>
         <h2>Who do you think will win?</h2>
-        <p class="lead">Please make a selection:</p>
+        <p>Please make a selection:</p>
 
         <div class="btn-group btn-group-sm" role="group">
-            <button type="button" class="btn" value="BOS"><img src="../static/images/team_logos/boston-celtics-logo-vector.png" class="img-fluid img-thumbnail">
+            <button type="button" class="btn" value="BOS" href="#team"><img src="../static/images/team_logos/boston-celtics-logo-vector.png" class="img-fluid img-thumbnail">
             <button type="button" class="btn" value="CLE"><img src="../static/images/team_logos/cleveland-cavaliers-logo-vector.png" class="img-fluid img-thumbnail">
             <button type="button" class="btn" value="GSW"><img src="../static/images/team_logos/golden-state-warriors-logo-vector.png" class="img-fluid img-thumbnail">
             <button type="button" class="btn" value="HOU"><img src="../static/images/team_logos/houston-rockets-logo-vector.png" class="img-fluid img-thumbnail">
@@ -103,6 +114,7 @@
                       </tbody>
                     </table>
                   </div>
+                  <div id="perc_circle"></div>
 
                   <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -180,6 +192,9 @@
                         <td id="steals_per_game"></td>
                       </tbody>
                     </table>
+
+                    <h4>Fun Fact!</h4>
+                    <p id="team_fact"></p>
                   </div>
 
                   <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
@@ -191,7 +206,7 @@
 
         </div>
 
-        <div class="col-sm-4" style="border-style: solid; border-color: black black black grey">
+        <div id="live_score" class="col-sm-4">
           <section id="live">
             <div class="container-fluid">
               <h2>Live Playoff Scoreboard</h2>
@@ -200,7 +215,7 @@
           </section>
 
         </div>
-        <div class="col-sm-12">
+        <div id="contact_us" class="col-sm-12">
           <hr class="mt-0">
           <section id="contact" class="">
             <div class="container">
@@ -213,33 +228,30 @@
                       <img class="card-img-top" src="../static/images/creator_profiles/alex.jpeg" alt="Card image cap">
                       <div class="card-body text-dark">
                         <h5 class="card-title">@lex</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat.</p>
-                        <p class="card-text"><span class="text-muted"><a href="https://github.com/buitron"><i class="fab fa-github fa-3x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.linkedin.com/in/buitron/"><i class="fab fa-linkedin-in fa-3x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#"><i class="fas fa-home fa-3x"></i></a></span></p>
+                        <p class="card-text mb-5">I like turtles.</p>
+                        <p class="card-text card_links"><span class="text-muted"><a href="https://github.com/buitron"><i class="fab fa-github fa-3x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.linkedin.com/in/buitron"><i class="fab fa-linkedin-in fa-3x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://alexbuitron.com"><i class="fas fa-home fa-3x"></i></a></span></p>
                       </div>
                     </div>
                     <div class="card">
                       <img class="card-img-top" src="../static/images/creator_profiles/victor.jpg" alt="Card image cap">
                       <div class="card-body text-dark">
                         <h5 class="card-title">V1ctor</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        <p class="card-text mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                         consequat.</p>
-                        <p class="card-text"><span class="text-muted"><a href="https://github.com/victoryk13"><i class="fab fa-github fa-3x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.linkedin.com/in/victor-kuo/"><i class="fab fa-linkedin-in fa-3x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#"><i class="fas fa-home fa-3x"></i></a></span></p>
+                        <p class="card-text card_links"><span class="text-muted"><a href="https://github.com/victoryk13"><i class="fab fa-github fa-3x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.linkedin.com/in/victor-kuo/"><i class="fab fa-linkedin-in fa-3x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#"><i class="fas fa-home fa-3x"></i></a></span></p>
                       </div>
                     </div>
                     <div class="card">
                       <img class="card-img-top" src="../static/images/creator_profiles/sungwon.jpg" alt="Card image cap">
                       <div class="card-body text-dark">
                         <h5 class="card-title">Sungw0n</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        <p class="card-text mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                         consequat.</p>
-                        <p class="card-text"><span class="text-muted"><a href="https://github.com/sungwonb"><i class="fab fa-github fa-3x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.linkedin.com/in/sungwonbyun/"><i class="fab fa-linkedin-in fa-3x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#"><i class="fas fa-home fa-3x"></i></a></span></p>
+                        <p class="card-text card_links"><span class="text-muted"><a href="https://github.com/sungwonb"><i class="fab fa-github fa-3x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.linkedin.com/in/sungwonbyun/"><i class="fab fa-linkedin-in fa-3x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#"><i class="fas fa-home fa-3x"></i></a></span></p>
                       </div>
                     </div>
                   </div>
@@ -255,7 +267,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="py-5 bg-dark">
+    <footer id="feet" class="py-5 bg-dark">
       <div class="container">
         <p class="m-0 text-center text-white">Copyright &copy; The Three Datateers 2018</p>
       </div>
@@ -268,6 +280,7 @@
 
     <!-- Plugin JavaScript -->
     <script src="{{ url_for('static', filename='vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+
 
     <!-- Custom JavaScript for this theme -->
     <script src="{{ url_for('static', filename='js/scrolling-nav.js') }}"></script>

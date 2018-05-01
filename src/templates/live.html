@@ -30,34 +30,30 @@
                             {{ l.hometeam_abbrev }} vs. {{ l.awayteam_abbrev }}
                         </th>
                     <tr>
+                    <tr class="text-center">
+                        <th scope="col" colspan="2">
+                            Game {{ l.game_number }} ({{ l.series_leader }})
+                        </th>
+                    <tr>
                     {% if l.game_clock %}
                     <tr class="text-center">
-                        <th scope="col" colspan="2">Game Clock: {{ l.game_clock }}</th>
+                        <th scope="col" colspan="2">Game Clock: {{ l.game_clock }} Game Duration: {{ l.game_duration }}</th>
                     </tr>
-                    {% endif %}
-                    {% if l.duration != '' %}
-                    <tr class="text-center">
-                        <th scope="col" colspan="2">Game Duration: {{ l.game_duration }}</th>
-                    </tr>
+
                     {% endif %}
                     {% if l.game_date %}
                     <tr class="text-center">
-                        <th scope="col" colspan="2">Game Date: {{ l.game_date }}, Game Time: {{ l.game_time }}</th>
+                        <th scope="col" colspan="2">Game Date: {{ l.game_date }} | Game Time: {{ l.game_time }}</th>
                     </tr>
                     {% endif %}
-                    <tr class="text-center">
-                        <th scope="col" colspan="2">
-                            Series Leader: {{ l.series_leader }}</br>Game Number: {{ l.game_number }}
-                        </th>
-                    <tr>
                         <th scope="col">Home Team</th>
                         <th scope="col">Away Team</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="table-light">
-                        <td>{{ l.hometeam_abbrev }}</td>
-                        <td>{{ l.awayteam_abbrev }}</td>
+                        <td id="home"><img src="../static/images/team_logos_small/{{ l.hometeam_abbrev }}.png"> {{ l.hometeam_abbrev }}</td>
+                        <td id="away"><img src="../static/images/team_logos_small/{{ l.awayteam_abbrev }}.png"> {{ l.awayteam_abbrev }}</td>
                     </tr>
                     <tr class="table-light">
                         <td>{{ l.hometeam_score }}</td>

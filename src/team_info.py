@@ -29,6 +29,7 @@ def team_info(team):
                             ,Team_info.assists_per_game
                             ,Team_info.steals_per_game
                             ,Team_info.blocks_per_game
+                            ,Team_info.team_fact
 	).filter(Team_info.team_abbrev == team).all()
 
 	Team_info_dict = [{"Team": each[1],
@@ -47,7 +48,8 @@ def team_info(team):
 	"Rebounds Per Game": each[14],
 	"Assists Per Game": each[15],
 	"Steals Per Game": each[16],
-	"Blocks Per Game": each[17]
+	"Blocks Per Game": each[17],
+	"Team Fact": each[18]
 	} for each in queryExpression]
 
 	return Team_info_dict[0]

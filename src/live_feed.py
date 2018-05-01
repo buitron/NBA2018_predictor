@@ -18,6 +18,7 @@ def now_playing():
                 game_duration = "{}hrs, {}min".format(game['gameDuration']['hours'], game['gameDuration']['minutes'])
                 game_clock = game['clock']
                 game_date = game['startDateEastern']
+                game_date = f"{game_date[4:6]}/{game_date[6:]}/{game_date[:4]}"
                 game_time = game['startTimeEastern']
 
                 playoffs = game['playoffs']
