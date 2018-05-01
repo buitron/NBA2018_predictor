@@ -10,6 +10,9 @@
 
     <title>NBA 2018 Champion Forecaster</title>
 
+    <!-- d3 javascript library -->
+    <script src="{{ url_for('static', filename='vendor/d3/d3.min.js') }}"></script>
+
     <!-- Bootstrap core CSS -->
     <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
@@ -108,6 +111,7 @@
                       </tbody>
                     </table>
                   </div>
+                  <div id="perc_circle"></div>
 
                   <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -221,33 +225,30 @@
                       <img class="card-img-top" src="../static/images/creator_profiles/alex.jpeg" alt="Card image cap">
                       <div class="card-body text-dark">
                         <h5 class="card-title">@lex</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat.</p>
-                        <p class="card-text"><span class="text-muted"><a href="https://github.com/buitron"><i class="fab fa-github fa-3x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.linkedin.com/in/buitron/"><i class="fab fa-linkedin-in fa-3x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#"><i class="fas fa-home fa-3x"></i></a></span></p>
+                        <p class="card-text mb-5">I like turtles.</p>
+                        <p class="card-text card_links"><span class="text-muted"><a href="https://github.com/buitron"><i class="fab fa-github fa-3x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.linkedin.com/in/buitron"><i class="fab fa-linkedin-in fa-3x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://alexbuitron.com"><i class="fas fa-home fa-3x"></i></a></span></p>
                       </div>
                     </div>
                     <div class="card">
                       <img class="card-img-top" src="../static/images/creator_profiles/victor.jpg" alt="Card image cap">
                       <div class="card-body text-dark">
                         <h5 class="card-title">V1ctor</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        <p class="card-text mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                         consequat.</p>
-                        <p class="card-text"><span class="text-muted"><a href="https://github.com/victoryk13"><i class="fab fa-github fa-3x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.linkedin.com/in/victor-kuo/"><i class="fab fa-linkedin-in fa-3x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#"><i class="fas fa-home fa-3x"></i></a></span></p>
+                        <p class="card-text card_links"><span class="text-muted"><a href="https://github.com/victoryk13"><i class="fab fa-github fa-3x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.linkedin.com/in/victor-kuo/"><i class="fab fa-linkedin-in fa-3x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#"><i class="fas fa-home fa-3x"></i></a></span></p>
                       </div>
                     </div>
                     <div class="card">
                       <img class="card-img-top" src="../static/images/creator_profiles/sungwon.jpg" alt="Card image cap">
                       <div class="card-body text-dark">
                         <h5 class="card-title">Sungw0n</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        <p class="card-text mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                         consequat.</p>
-                        <p class="card-text"><span class="text-muted"><a href="https://github.com/sungwonb"><i class="fab fa-github fa-3x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.linkedin.com/in/sungwonbyun/"><i class="fab fa-linkedin-in fa-3x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#"><i class="fas fa-home fa-3x"></i></a></span></p>
+                        <p class="card-text card_links"><span class="text-muted"><a href="https://github.com/sungwonb"><i class="fab fa-github fa-3x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.linkedin.com/in/sungwonbyun/"><i class="fab fa-linkedin-in fa-3x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#"><i class="fas fa-home fa-3x"></i></a></span></p>
                       </div>
                     </div>
                   </div>
@@ -276,6 +277,7 @@
 
     <!-- Plugin JavaScript -->
     <script src="{{ url_for('static', filename='vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+
 
     <!-- Custom JavaScript for this theme -->
     <script src="{{ url_for('static', filename='js/scrolling-nav.js') }}"></script>

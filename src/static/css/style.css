@@ -153,4 +153,20 @@ hr {
 	left: 10%;
 }
 
+.card_links {
+	position: absolute;
+	bottom: 2%;
+}
+
+text {
+	font-size: 60pt;
+	fill: #FFFFFF;
+}
+
+path.color0 {
+    fill: #fff;
+}
+path.color1 {
+    fill: rgba(255,255,255,.3);
+}
 
