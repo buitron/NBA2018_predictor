@@ -49,7 +49,7 @@ def team_info(team):
 	"Assists Per Game": each[15],
 	"Steals Per Game": each[16],
 	"Blocks Per Game": each[17],
-	"Team Fact": each[19]
+	"Team Fact": each[18]
 	} for each in queryExpression]
 
 	return Team_info_dict[0]

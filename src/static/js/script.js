@@ -31,6 +31,9 @@ jQuery(function ($) {
             $('#rebounds_per_game').text(data['Rebounds Per Game']);
             $('#steals_per_game').text(data['Steals Per Game']);
 
+            $('#team_fact').text(data['Team Fact']);
+
+
         })
 
         $.getJSON($SCRIPT_ROOT + '/prediction_stats', {
