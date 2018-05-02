@@ -38,6 +38,8 @@ jQuery(function ($) {
 
         })
 
+        // prediction section
+
         $.getJSON($SCRIPT_ROOT + '/prediction_stats', {
         }, function(data) {
 
@@ -46,6 +48,9 @@ jQuery(function ($) {
             var counter = 0;
             data['team_prediction'].forEach(function(element) {
                 counter ++;
+
+                console.log(element)
+
                 if (element[3] == previousClass) {
                     $('#champion').text(element[1]);
                     $('#predict_perc').text(element[0]);
