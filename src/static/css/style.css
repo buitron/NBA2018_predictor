@@ -124,6 +124,11 @@
 
 /*global styles*/
 
+body {
+	font-family: 'Advent Pro';
+	/*font-size: 22px;*/
+}
+
 #bodydiv {
 	background-color: #000000;
 	color: #FFFFFF;

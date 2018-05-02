@@ -10,6 +10,9 @@
 
     <title>NBA 2018 Champion Forecaster</title>
 
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Advent Pro' rel='stylesheet'>
+
     <!-- d3 javascript library -->
     <script src="{{ url_for('static', filename='vendor/d3/d3.min.js') }}"></script>
 
@@ -31,9 +34,9 @@
   <body id="page-top">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">NBA Forecaster</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="{{ url_for('static', filename='images/nba_logos/NBA_logo.png') }}"> NBA Forecaster</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -57,35 +60,34 @@
     </nav>
 
     <video autoplay muted loop id="myVideo">
-      <source src="{{ url_for('static', filename='video/nba2018_playoffs_promo.mp4') }}" type="video/mp4">
+      <source src="{{ url_for('static', filename='video/nba_finals.mp4') }}" type="video/mp4">
     </video>
-
 
     <header id="selection" class="text-white">
       <div id="team_buttons" class="container-fluid text-center">
-        <h1>NBA 2018 Champion Forecaster</h1>
+        <h1 class="font-weight-bold">NBA 2018 Champion Forecaster</h1>
         <h2>Who do you think will win?</h2>
         <p>Please make a selection:</p>
 
         <div class="btn-group btn-group-sm" role="group">
-            <button type="button" class="btn" value="BOS" href="#team"><img src="../static/images/team_logos/boston-celtics-logo-vector.png" class="img-fluid img-thumbnail">
-            <button type="button" class="btn" value="CLE"><img src="../static/images/team_logos/cleveland-cavaliers-logo-vector.png" class="img-fluid img-thumbnail">
-            <button type="button" class="btn" value="GSW"><img src="../static/images/team_logos/golden-state-warriors-logo-vector.png" class="img-fluid img-thumbnail">
-            <button type="button" class="btn" value="HOU"><img src="../static/images/team_logos/houston-rockets-logo-vector.png" class="img-fluid img-thumbnail">
-            <button type="button" class="btn" value="IND"><img src="../static/images/team_logos/indiana-pacers-logo-vector.png" class="img-fluid img-thumbnail">
-            <button type="button" class="btn" value="MIA"><img src="../static/images/team_logos/miami-heat-logo-vector.png" class="img-fluid img-thumbnail">
-            <button type="button" class="btn" value="MIL"><img src="../static/images/team_logos/milwaukee-bucks-logo-vector.png" class="img-fluid img-thumbnail">
-            <button type="button" class="btn" value="MIN"><img src="../static/images/team_logos/minnesota-timberwolves-logo-vector.png" class="img-fluid img-thumbnail">
+            <button type="button" class="team_btn btn" value="BOS" href="#team"><img src="../static/images/team_logos/boston-celtics-logo-vector.png" class="img-fluid img-thumbnail">
+            <button type="button" class="team_btn btn" value="CLE"><img src="../static/images/team_logos/cleveland-cavaliers-logo-vector.png" class="img-fluid img-thumbnail">
+            <button type="button" class="team_btn btn" value="GSW"><img src="../static/images/team_logos/golden-state-warriors-logo-vector.png" class="img-fluid img-thumbnail">
+            <button type="button" class="team_btn btn" value="HOU"><img src="../static/images/team_logos/houston-rockets-logo-vector.png" class="img-fluid img-thumbnail">
+            <button type="button" class="team_btn btn" value="IND"><img src="../static/images/team_logos/indiana-pacers-logo-vector.png" class="img-fluid img-thumbnail">
+            <button type="button" class="team_btn btn" value="MIA"><img src="../static/images/team_logos/miami-heat-logo-vector.png" class="img-fluid img-thumbnail">
+            <button type="button" class="team_btn btn" value="MIL"><img src="../static/images/team_logos/milwaukee-bucks-logo-vector.png" class="img-fluid img-thumbnail">
+            <button type="button" class="team_btn btn" value="MIN"><img src="../static/images/team_logos/minnesota-timberwolves-logo-vector.png" class="img-fluid img-thumbnail">
         </div>
         <div class="btn-group btn-group-sm" role="group">
-            <button type="button" class="btn" value="NOP"><img src="../static/images/team_logos/new-orleans-pelicans-logo-vector.png" class="img-fluid img-thumbnail">
-            <button type="button" class="btn" value="OKC"><img src="../static/images/team_logos/oklahoma-city-thunder-logo-vector.png" class="img-fluid img-thumbnail">
-            <button type="button" class="btn" value="PHI"><img src="../static/images/team_logos/philadelphia-76ers-logo-vector.png" class="img-fluid img-thumbnail">
-            <button type="button" class="btn" value="POR"><img src="../static/images/team_logos/portland-trail-blazers-logo-vector.png" class="img-fluid img-thumbnail">
-            <button type="button" class="btn" value="SAS"><img src="../static/images/team_logos/san-antonio-spurs-logo-vector.png" class="img-fluid img-thumbnail">
-            <button type="button" class="btn" value="TOR"><img src="../static/images/team_logos/toronto-raptors-logo-vector.png" class="img-fluid img-thumbnail">
-            <button type="button" class="btn" value="UTA"><img src="../static/images/team_logos/utah-jazz-logo-vector.png" class="img-fluid img-thumbnail">
-            <button type="button" class="btn" value="WAS"><img src="../static/images/team_logos/washington-wizards-logo-vector.png" class="img-fluid img-thumbnail">
+            <button type="button" class="team_btn btn" value="NOP"><img src="../static/images/team_logos/new-orleans-pelicans-logo-vector.png" class="img-fluid img-thumbnail">
+            <button type="button" class="team_btn btn" value="OKC"><img src="../static/images/team_logos/oklahoma-city-thunder-logo-vector.png" class="img-fluid img-thumbnail">
+            <button type="button" class="team_btn btn" value="PHI"><img src="../static/images/team_logos/philadelphia-76ers-logo-vector.png" class="img-fluid img-thumbnail">
+            <button type="button" class="team_btn btn" value="POR"><img src="../static/images/team_logos/portland-trail-blazers-logo-vector.png" class="img-fluid img-thumbnail">
+            <button type="button" class="team_btn btn" value="SAS"><img src="../static/images/team_logos/san-antonio-spurs-logo-vector.png" class="img-fluid img-thumbnail">
+            <button type="button" class="team_btn btn" value="TOR"><img src="../static/images/team_logos/toronto-raptors-logo-vector.png" class="img-fluid img-thumbnail">
+            <button type="button" class="team_btn btn" value="UTA"><img src="../static/images/team_logos/utah-jazz-logo-vector.png" class="img-fluid img-thumbnail">
+            <button type="button" class="team_btn btn" value="WAS"><img src="../static/images/team_logos/washington-wizards-logo-vector.png" class="img-fluid img-thumbnail">
         </div>
 
       </div>
@@ -95,33 +97,145 @@
       <div class="row">
 
         <div id="team" class="col-sm-8">
-          <section id="about">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-8 mx-auto">
-                  <h2 id="team_name">Forecast Results</h2>
-                  <div id="team_predict" class="table-responive-md" hidden>
-                    <table class="table table-sm table-bordered">
-                      <thead class="thead-light">
-                        <th scope="col">Champion</th>
-                        <th scope="col">Champion Percentage</th>
-                        <th scope="col">Model Team Rank</th>
+          <section id="about" class="pb-0">
+            <div class="container text-center">
+              <h1 id="team_name" class="mb-4">Forecast Results</h1>
+              <div id="team_predict" class="row" hidden>
+                <div class="col-md-4 mx-auto">
+                  <div class="table-responsive-md">
+                    <table class="table table-sm table-bordered table-hover p-0">
+                      <thead class="thead-light" style="font-size: 14px">
+                        <th scope="col">Ranking</th>
+                        <th scope="col">Team</th>
                       </thead>
-                      <tbody>
-                        <td id="champion"></td>
-                        <td id="predict_perc"></td>
-                        <td id="ranked"></td>
+                      <tbody style="font-size: 8px">
+                        <tr id="HOU" class="predict_table">
+                          <td class="ranking">1</td>
+                          <td class="ranking_team">Houston Rockets</td>
+                        </tr>
+                        <tr id="GSW" class="predict_table">
+                          <td class="ranking">2</td>
+                          <td class="ranking_team">Golden State Warriors</td>
+                        </tr>
+                        <tr id="TOR" class="predict_table">
+                          <td class="ranking">3</td>
+                          <td class="ranking_team">Toronto Raptors</td>
+                        </tr>
+                        <tr id="BOS" class="predict_table">
+                          <td class="ranking">4</td>
+                          <td class="ranking_team">Boston Celtics</td>
+                        </tr>
+                        <tr id="PHI" class="predict_table">
+                          <td class="ranking">5</td>
+                          <td class="ranking_team">Philadelphia Sixers</td>
+                        </tr>
+                        <tr id="NOP" class="predict_table">
+                          <td class="ranking">6</td>
+                          <td class="ranking_team">New Orleans Pelicans</td>
+                        </tr>
+                        <tr id="CLE" class="predict_table">
+                          <td class="ranking">7</td>
+                          <td class="ranking_team">Cleveland Cavaliers</td>
+                        </tr>
+                        <tr id="CHI" class="predict_table">
+                          <td class="ranking">8</td>
+                          <td class="ranking_team">Chicago Bulls</td>
+                        </tr>
+                        <tr id="OKC" class="predict_table">
+                          <td class="ranking">9</td>
+                          <td class="ranking_team">Oklahoma City Thunder</td>
+                        </tr>
+                        <tr id="MIA" class="predict_table">
+                          <td class="ranking">10</td>
+                          <td class="ranking_team">Miami Heat</td>
+                        </tr>
+                        <tr id="UTA" class="predict_table">
+                          <td class="ranking">11</td>
+                          <td class="ranking_team">Utah Jazz</td>
+                        </tr>
+                        <tr id="DAL" class="predict_table">
+                          <td class="ranking">12</td>
+                          <td class="ranking_team">Dallas Cowboys</td>
+                        </tr>
+                        <tr id="DEN" class="predict_table">
+                          <td class="ranking">13</td>
+                          <td class="ranking_team">Denver Nuggets</td>
+                        </tr>
+                        <tr id="ATL" class="predict_table">
+                          <td class="ranking">14</td>
+                          <td class="ranking_team">Atlanta Falcons</td>
+                        </tr>
+                        <tr id="DET" class="predict_table">
+                          <td class="ranking">15</td>
+                          <td class="ranking_team">Detroit Pistons</td>
+                        </tr>
+                        <tr id="MIL" class="predict_table">
+                          <td class="ranking">16</td>
+                          <td class="ranking_team">Milwaukee Bucks</td>
+                        </tr>
+                        <tr id="BKN" class="predict_table">
+                          <td class="ranking">17</td>
+                          <td class="ranking_team">Brookyln Nets</td>
+                        </tr>
+                        <tr id="IND" class="predict_table">
+                          <td class="ranking">18</td>
+                          <td class="ranking_team">Indiana Pacers</td>
+                        </tr>
+                        <tr id="MIN" class="predict_table">
+                          <td class="ranking">19</td>
+                          <td class="ranking_team">Minnesota Timberwolves</td>
+                        </tr>
+                        <tr id="LAL" class="predict_table">
+                          <td class="ranking">20</td>
+                          <td class="ranking_team">Los Angeles Lakers</td>
+                        </tr>
+                        <tr id="POR" class="predict_table">
+                          <td class="ranking">21</td>
+                          <td class="ranking_team">Portland Trailblazers</td>
+                        </tr>
+                        <tr id="NYK" class="predict_table">
+                          <td class="ranking">22</td>
+                          <td class="ranking_team">New York Knicks</td>
+                        </tr>
+                        <tr id="ORL" class="predict_table">
+                          <td class="ranking">23</td>
+                          <td class="ranking_team">Orlando Magic</td>
+                        </tr>
+                        <tr id="CHA" class="predict_table">
+                          <td class="ranking">24</td>
+                          <td class="ranking_team">Charlotte Hornets</td>
+                        </tr>
+                        <tr id="WAS" class="predict_table">
+                          <td class="ranking">25</td>
+                          <td class="ranking_team">Washington Wizards</td>
+                        </tr>
+                        <tr id="SAS" class="predict_table">
+                          <td class="ranking">26</td>
+                          <td class="ranking_team">San Antonio Spurs</td>
+                        </tr>
+                        <tr id="SAC" class="predict_table">
+                          <td class="ranking">27</td>
+                          <td class="ranking_team">Sacramento Kings</td>
+                        </tr>
+                        <tr id="PHX" class="predict_table">
+                          <td class="ranking">28</td>
+                          <td class="ranking_team">Phoenix Suns</td>
+                        </tr>
+                        <tr id="MEM" class="predict_table">
+                          <td class="ranking">29</td>
+                          <td class="ranking_team">Memphis Grizzlies</td>
+                        </tr>
+                        <tr id="LAC" class="predict_table">
+                          <td class="ranking">30</td>
+                          <td class="ranking_team">LA Clippers</td>
+                        </tr>
                       </tbody>
                     </table>
                   </div>
-                  <div id="perc_circle"></div>
-
-                  <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="col-md-5 mx-auto">
+                  <h4>Chance of Winning 2018 Championship</h4>
+                  <div id="perc_circle" class="mt-4"></div>
                 </div>
               </div>
             </div>
@@ -130,40 +244,49 @@
           <section id="services">
             <div class="container">
               <div class="row">
-                <div class="col-lg-8 mx-auto">
-                  <h2>Team Information</h2>
+                <div class="col-md-8 mx-auto">
+                  <h1 class="text-center mb-4">Team Information</h1>
                   <div id="team_table" class="table-responive-md" hidden>
                     <table class="table table-sm table-bordered">
                       <thead class="thead-light">
-                        <th scope="col">Playoff Seed</th>
-                        <th scope="col">Conference</th>
-                        <th scope="col">Division</th>
                         <th scope="col">Head Coach</th>
                         <th scope="col">Star Player</th>
                       </thead>
                       <tbody>
-                        <td id="playoff_seed"></td>
-                        <td id="conference"></td>
-                        <td id="division"></td>
-                        <td id="head_coach"></td>
-                        <td id="star_player"></td>
+                        <td>soon deprecated</td>
+                        <td>soon deprecated</td>
                       </tbody>
                     </table>
 
-                    <table class="table table-sm table-bordered">
+                    <div class="row mb-4 text-center">
+                      <div class="col-md-4">
+                        <img id="conference">
+                        <p id="division" class="font-weight-bold"></p>
+                      </div>
+                      <div class="col-md-4 text-center">
+                        <img id="head_coach_img">
+                        <p id="head_coach" class="font-weight-bold"></p>
+                      </div>
+                      <div class="col-md-4 text-center">
+                        <img id="star_player_img">
+                        <p id="star_player" class="font-weight-bold"></p>
+                      </div>
+                    </div>
+
+                    <table class="table table-sm table-bordered table-hover">
                       <thead class="thead-light">
+                        <th scope="col">Playoff Seed</th>
                         <th scope="col">Regular Season Wins</th>
                         <th scope="col">Regular Season Losses</th>
                         <th scope="col">Win Percentage</th>
                       </thead>
                       <tbody>
+                        <td id="playoff_seed"></td>
                         <td id="rs_season_wins"></td>
                         <td id="rs_season_losses"></td>
                         <td id="win_percentage"></td>
                       </tbody>
-                    </table>
 
-                    <table class="table table-sm table-bordered">
                       <thead class="thead-light">
                         <th scope="col">Points Per Game</th>
                         <th scope="col">Field Goal Percentage</th>
@@ -176,9 +299,7 @@
                         <td id="free_throw_percentage"></td>
                         <td id="three_point_percentage"></td>
                       </tbody>
-                    </table>
 
-                    <table class="table table-sm table-bordered">
                       <thead class="thead-light">
                         <th scope="col">Assists Per Game</th>
                         <th scope="col">Blocks Per Game</th>
@@ -193,7 +314,7 @@
                       </tbody>
                     </table>
 
-                    <h4>Fun Fact!</h4>
+                    <h4 class="font-weight-bold">Fun Fact!</h4>
                     <p id="team_fact"></p>
                   </div>
 
@@ -208,9 +329,9 @@
 
         <div id="live_score" class="col-sm-4">
           <section id="live">
-            <div class="container-fluid">
-              <h2>Live Playoff Scoreboard</h2>
-              <iframe class="col-lg-12 mr-auto" src="/live" height="900" width="400" frameborder="0" scrolling="yes"></iframe>
+            <div class="container-fluid text-center">
+              <h1 class="mb-4">Live Playoff Scoreboard</h1>
+              <iframe class="col-md-12 mr-auto" src="/live" height="900" width="400" frameborder="0" scrolling="yes"></iframe>
             </div>
           </section>
 
@@ -220,8 +341,8 @@
           <section id="contact" class="">
             <div class="container">
               <div class="row">
-                <div class="col-lg-8 mx-auto">
-                  <h2>Contact us</h2>
+                <div class="col-md-8 mx-auto">
+                  <h2 class="mb-4">Contact us</h2>
 
                   <div class="card-deck">
                     <div class="card">
@@ -254,6 +375,57 @@
                         <p class="card-text card_links"><span class="text-muted"><a href="https://github.com/sungwonb"><i class="fab fa-github fa-3x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.linkedin.com/in/sungwonbyun/"><i class="fab fa-linkedin-in fa-3x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#"><i class="fas fa-home fa-3x"></i></a></span></p>
                       </div>
                     </div>
+
+                    <!-- Button trigger modal -->
+                    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                      Launch demo modal
+                    </button> -->
+
+                    <!-- Modal -->
+                    <!-- <div class="modal" tabindex="-1" role="dialog">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <p>Modal body text goes here.</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div id="myModal" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            ...
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div> -->
+
+
+
+
                   </div>
 
                 </div>

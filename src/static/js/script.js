@@ -1,7 +1,7 @@
 var previousClass;
 
 jQuery(function ($) {
-    $('.btn').click(function () {
+    $('.team_btn').click(function () {
 
         $('#team').removeClass(previousClass).addClass($(this).val());
         previousClass = $(this).val();
@@ -12,13 +12,16 @@ jQuery(function ($) {
         	team_name: $(this).val()
         }, function(data) {
 
+            console.log(data.Conference)
+
             $('.lead').hide();
             $('#team_name').text(data.Team);
 
             $('#team_table').removeAttr('hidden');
             $('#playoff_seed').text(data['Playoff Seed']);
-            $('#conference').text(data.Conference);
-            $('#division').text(data.Division);
+            $('#conference').attr('src', '../static/images/nba_logos/' + data.Conference + '_logo.png');
+
+            $('#division').text(data.Division + " Division");
             $('#head_coach').text(data['Head Coach']);
             $('#star_player').text(data['Star Player']);
             $('#rs_season_wins').text(data['Regular Season Wins']);
@@ -38,6 +41,8 @@ jQuery(function ($) {
 
         })
 
+        // prediction section
+
         $.getJSON($SCRIPT_ROOT + '/prediction_stats', {
         }, function(data) {
 
@@ -46,10 +51,14 @@ jQuery(function ($) {
             var counter = 0;
             data['team_prediction'].forEach(function(element) {
                 counter ++;
+
                 if (element[3] == previousClass) {
                     $('#champion').text(element[1]);
                     $('#predict_perc').text(element[0]);
                     $('#ranked').text(counter);
+
+                    $('.predict_table').css({ 'font-size': '', 'font-weight': '', 'outline-style': '', 'outline-color': ''})
+                    $('#' + element[3]).css({ 'font-size': 14, 'font-weight': 800, 'outline-style': 'solid', 'outline-color': 'red'})
 
                     // d3 percent circle
 
@@ -59,8 +68,8 @@ jQuery(function ($) {
                     var duration = 1500,
                         transition = 200,
                         percent = element[0] * 100,
-                        width = window.innerWidth - 800,
-                        height = window.innerHeight - 600;
+                        width = window.innerWidth - 1230,
+                        height = window.innerHeight - 588;
 
                     var dataset = {
                                 lower: calcPercent(0),
@@ -79,7 +88,7 @@ jQuery(function ($) {
                             .attr("width", width)
                             .attr("height", height)
                             .append("g")
-                            .attr("transform", "translate(" + width / 5 + "," + height / 2 + ")");
+                            .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
                     var path = svg.selectAll("path")
                                     .data(pie(dataset.lower))
@@ -122,4 +131,8 @@ jQuery(function ($) {
         })
     })
 });
+
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
 
