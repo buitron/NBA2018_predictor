@@ -40,7 +40,7 @@ def team_info(team):
 	"Playoff Seed": each[6],
 	"Regular Season Wins": each[7],
 	"Regular Season Losses": each[8],
-	"Win Percentage": float('{:2f}'.format(each[9])),
+	"Win Percentage": float('{:.2f}'.format(each[9] * 100)),
 	"Points Per Game": each[10],
 	"Field Goal Percentage": each[11],
 	"Three Point Percentage": each[12],
