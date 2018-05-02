@@ -56,6 +56,11 @@ jQuery(function ($) {
                     $('#predict_perc').text(element[0]);
                     $('#ranked').text(counter);
 
+                    team_id = '#' + element[3];
+
+                    document.getElementById(element[3]).style.fontSize = "11px";
+                    document.getElementById(element[3]).style.fontWeight = "700";
+
                     // d3 percent circle
 
                     $('#circle').remove()
