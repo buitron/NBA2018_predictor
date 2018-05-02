@@ -1,7 +1,7 @@
 var previousClass;
 
 jQuery(function ($) {
-    $('.btn').click(function () {
+    $('.team_btn').click(function () {
 
         $('#team').removeClass(previousClass).addClass($(this).val());
         previousClass = $(this).val();
@@ -127,4 +127,8 @@ jQuery(function ($) {
         })
     })
 });
+
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
 
