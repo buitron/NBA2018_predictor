@@ -3,7 +3,7 @@ var previousClass;
 
 // activate hover-messages using tooltip
 $(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip();   
+    $('[data-toggle="tooltip"]').tooltip();
 });
 
 
@@ -26,16 +26,16 @@ jQuery(function ($) {
 
             $('#team_table').removeAttr('hidden');
             $('#playoff_seed').text(data['Playoff Seed']);
-            
+
             $('#conference').attr('src', '../static/images/nba_logos/' + data.Conference + '_logo.png');
             $('#division').text(data.Division + " Division");
-            
+
             $('#head_coach').text(data['Head Coach']);
             $('#head_coach_img').attr('src', '../static/images/team_coaches/' + data.Team.split(" ")[1] + '.jpg');
 
             $('#star_player').text(data['Star Player']);
             $('#star_player_img').attr('src', '../static/images/team_star/' + data.Team.split(" ")[1] + '.jpg');
-            
+
             $('#rs_season_wins').text(data['Regular Season Wins']);
             $('#rs_season_losses').text(data['Regular Season Losses']);
             $('#win_percentage').text(data['Win Percentage']);
@@ -64,7 +64,7 @@ jQuery(function ($) {
             data['team_prediction'].forEach(function(element) {
                 counter ++;
 
-                $('#team'+counter).text(element[2]); 
+                $('#team'+counter).text(element[2]);
 
                 if (element[3] == previousClass) {
 
@@ -145,14 +145,8 @@ jQuery(function ($) {
                         return [percent, 100 - percent];
                     };
 
-
                 }
             })
         })
     })
 });
-
-// $('#myModal').on('shown.bs.modal', function () {
-//   $('#myInput').trigger('focus')
-// })
-
