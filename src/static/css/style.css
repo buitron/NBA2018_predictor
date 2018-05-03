@@ -7,11 +7,17 @@
 	color: inherit;
 }
 
+/*padding adjustments*/
 
-section {
+.section {
 	padding-top: 75px;
 	padding-bottom: 75px;
 }
+
+.twitter-section, #contact {
+	padding-top: 25px;
+}
+
 
 
 /*team configurations*/
