@@ -1,5 +1,7 @@
 var previousClass;
 
+
+// activate hover-messages using tooltip
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();   
 });
