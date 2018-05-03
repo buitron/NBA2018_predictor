@@ -14,10 +14,14 @@
 	padding-bottom: 75px;
 }
 
-.twitter-section, #contact {
+#contact {
 	padding-top: 25px;
 }
 
+#twitter {
+	padding-bottom: 75px;
+
+}
 
 
 /*team configurations*/
