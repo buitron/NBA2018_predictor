@@ -102,11 +102,13 @@
           <section id="about" class="pb-0">
             <div class="container text-center">
               <div class="row">
-                <div class="col-md-8 mx-auto">
+                <div class="col-md mx-auto">
                   <h1 id="team_name" class="mb-4">Forecast Results</h1>
-                  <p class="lead" style="text-align: left">Our Random Forest (RF) model generates a team's probability of winning the 2018 NBA championship. Please select a team above to view its chances.</p>
+                  <div class="col-md-8 mx-auto">
+                    <p class="lead" style="text-align: left">Our Random Forest (RF) model generates a team's probability of winning the 2018 NBA championship. Please select a team above to view its chances.</p>
+                  </div>
                   <div id="team_predict" class="row" hidden>
-                    <div class="col-md-7 mx-auto">
+                    <div class="col-md-4 mx-auto">
                       <div class="table-responsive-md">
                         <table class="table table-sm table-bordered table-hover pb-0" id="ranking_table">
                           <thead class="thead-light" style="font-size: 13px">
@@ -238,7 +240,7 @@
                         </table>
                       </div>
                     </div>
-                    <div class="col-md-5 mx-auto">
+                    <div class="col-md-7 mx-auto">
                       <h4>Chance of Winning 2018 Championship</h4>
                       <div id="perc_circle" class="mt-4"></div>
                       <h4 style="padding-top: 40px">Our Machine Learning Model's Top 5 Strongest Stats</h4>
