@@ -18,17 +18,9 @@
 	padding-top: 25px;
 }
 
-#live_score {
-	padding-top: 75px;
-	max-height: 1500px;
-}
-
-#live {
-	padding-bottom: 75px;
-}
-
 #twitter {
-	padding: 0px;
+	padding-bottom: 75px;
+
 }
 
 
