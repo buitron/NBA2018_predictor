@@ -14,10 +14,14 @@
 	padding-bottom: 75px;
 }
 
-.twitter-section, #contact {
+#contact {
 	padding-top: 25px;
 }
 
+#twitter {
+	padding-bottom: 75px;
+
+}
 
 
 /*team configurations*/
@@ -178,6 +182,12 @@ hr {
 	bottom: 10%;
 	width: 80%;
 	left: 10%;
+}
+
+.card_profile {
+	position: absolute;
+	bottom: 15%;
+	right: 28%
 }
 
 .card_links {

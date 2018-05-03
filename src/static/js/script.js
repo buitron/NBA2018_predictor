@@ -6,6 +6,7 @@ $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();   
 });
 
+
 jQuery(function ($) {
     $('.team_btn').click(function () {
 
@@ -151,7 +152,7 @@ jQuery(function ($) {
     })
 });
 
-$('#myModal').on('shown.bs.modal', function () {
-  $('#myInput').trigger('focus')
-})
+// $('#myModal').on('shown.bs.modal', function () {
+//   $('#myInput').trigger('focus')
+// })
 
