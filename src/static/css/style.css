@@ -3,10 +3,16 @@
 	border-radius: 2;
 }
 
+.hover-tool {
+	color: inherit;
+}
+
+
 section {
 	padding-top: 75px;
 	padding-bottom: 75px;
 }
+
 
 /*team configurations*/
 

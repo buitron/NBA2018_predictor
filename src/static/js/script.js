@@ -1,5 +1,9 @@
 var previousClass;
 
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+
 jQuery(function ($) {
     $('.team_btn').click(function () {
 
@@ -56,7 +60,7 @@ jQuery(function ($) {
             var counter = 0;
             data['team_prediction'].forEach(function(element) {
                 counter ++;
-                
+
                 $('#team'+counter).text(element[2]); 
 
                 if (element[3] == previousClass) {
