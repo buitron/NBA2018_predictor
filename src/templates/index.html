@@ -49,10 +49,10 @@
               <a class="nav-link js-scroll-trigger" href="#services">Team Info</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#twitter">Twitter Feed</a>
+              <a class="nav-link js-scroll-trigger" href="#live">Live Scores!</a>  
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#live">Live Scores!</a>
+              <a class="nav-link js-scroll-trigger" href="#twitter">Twitter Feed</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
@@ -68,9 +68,10 @@
 
     <header id="selection" class="text-white">
       <div id="team_buttons" class="container-fluid text-center">
-        <h1 class="font-weight-bold">NBA 2018 Champion Forecaster</h1>
-        <h2>Who do you think will win?</h2>
-        <p>Please make a selection:</p>
+        <div id="frontpage">
+          <h1 class="font-weight-bold">NBA 2018 Champion Forecaster</h1>
+          <h2>Who do you think will win?</h2>
+        </div>
 
         <div class="btn-group btn-group-sm" role="group">
             <button type="button" class="team_btn btn" value="BOS" href="#team"><img src="../static/images/team_logos/boston-celtics-logo-vector.png" class="img-fluid img-thumbnail">
@@ -99,7 +100,7 @@
     <div id="bodydiv" class="container-fluid">
       <div class="row">
         <div id="team" class="col-sm-8">
-          <section id="about" class="pb-0 section">
+          <section id="about" class="pb-0">
             <div class="container text-center">
               <div class="row">
                 <div class="col-md mx-auto">
@@ -281,7 +282,7 @@
             </div>
           </section>
 
-          <section id="services" class="section">
+          <section id="services">
             <div class="container">
               <div class="row">
                 <div class="col-md mx-auto">
@@ -362,11 +363,11 @@
 
         <div id="live_score" class="col-sm-4">
           <div class="container-fluid text-center">
-            <section id="live" class="pb-0 section">
+            <section id="live" class="pb-0">
               <h1 class="mb-4">Live Playoff Scoreboard</h1>
-              <iframe id="scoreboard" class="col-md-12 mr-auto" src="/live" width="400" height="600" frameborder="0" scrolling="yes"></iframe>
+              <iframe id="scoreboard" class="col-md-12 mr-auto" src="/live" width="400" height="700" frameborder="0" scrolling="yes"></iframe>
             </section>
-            <section class="pt-0" id="twitter">
+            <section id="twitterfeed" class="pt-0" >
               <a id="twitter" class="twitter-timeline" data-width="400" data-height="600" data-theme="dark" href="https://twitter.com/sungwonb/lists/nba-tweets?ref_src=twsrc%5Etfw">Follow tweets covering the playoffs</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </section>
           </div>

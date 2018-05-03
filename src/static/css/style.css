@@ -9,18 +9,21 @@
 
 /*padding adjustments*/
 
-.section {
+#about, #live {
+	padding-top: 150px;
+	padding-bottom: 50px;
+}
+
+#services {
 	padding-top: 75px;
-	padding-bottom: 75px;
 }
 
 #contact {
 	padding-top: 25px;
 }
 
-#twitter {
-	padding-bottom: 75px;
-
+#twitterfeed {
+	padding-bottom: 150px;
 }
 
 
