@@ -99,142 +99,142 @@
     <div id="bodydiv" class="container-fluid">
       <div class="row">
         <div id="team" class="col-sm-8">
-          <section id="about" class="pb-0">
+          <section id="about" class="pb-0 section">
             <div class="container text-center">
               <div class="row">
                 <div class="col-md mx-auto">
                   <h1 id="team_name" class="mb-4">Forecast Results</h1>
                   <div class="col-md-8 mx-auto">
-                    <p class="lead" style="text-align: left">Our Random Forest (RF) model generates a team's probability of winning the 2018 NBA championship. Please select a team above to view its chances.</p>
+                    <p class="lead" style="text-align: left">Welcome to our NBA 2018 Champion Forecaster! Pick one of the 16 playoff teams by clicking on a team logo above. Our Random Forest (RF) machine learning model will generate that team's probability of winning the 2018 NBA championship, ranking among all 30 NBA teams.</p>
                   </div>
                   <div id="team_predict" class="row" hidden>
                     <div class="col-md-4 mx-auto">
                       <div class="table-responsive-md">
-                        <table class="table table-sm table-bordered table-hover pb-0" id="ranking_table">
+                        <table class="table table-dark table-sm table-bordered table-hover pb-0" id="ranking_table">
                           <thead class="thead-light" style="font-size: 13px">
-                            <th scope="col">RF Model Ranking</th>
+                            <th scope="col"><a class="hover-tool" href="#" data-toggle="tooltip" title="We used a Random Forest machine learning model to generate predictions and probabilities for NBA teams winning the championship">RF Model Ranking</a></th>
                             <th scope="col">Team</th>
                           </thead>
                           <tbody style="font-size: 9px">
-                            <tr id="HOU" class="predict_table_row">
+                            <tr id="row1" class="predict_table_row">
                               <td class="ranking">1</td>
-                              <td class="ranking_team">Houston Rockets</td>
+                              <td id="team1" class="ranking_team"></td>
                             </tr>
-                            <tr id="GSW" class="predict_table_row">
+                            <tr id="row2" class="predict_table_row">
                               <td class="ranking">2</td>
-                              <td class="ranking_team">Golden State Warriors</td>
+                              <td id="team2" class="ranking_team">Golden State Warriors</td>
                             </tr>
-                            <tr id="TOR" class="predict_table_row">
+                            <tr id="row3" class="predict_table_row">
                               <td class="ranking">3</td>
-                              <td class="ranking_team">Toronto Raptors</td>
+                              <td id="team3" class="ranking_team">Toronto Raptors</td>
                             </tr>
-                            <tr id="BOS" class="predict_table_row">
+                            <tr id="row4" class="predict_table_row">
                               <td class="ranking">4</td>
-                              <td class="ranking_team">Boston Celtics</td>
+                              <td id="team4" class="ranking_team">Boston Celtics</td>
                             </tr>
-                            <tr id="PHI" class="predict_table_row">
+                            <tr id="row5" class="predict_table_row">
                               <td class="ranking">5</td>
-                              <td class="ranking_team">Philadelphia Sixers</td>
+                              <td id="team5" class="ranking_team">Philadelphia Sixers</td>
                             </tr>
-                            <tr id="NOP" class="predict_table_row">
+                            <tr id="row6" class="predict_table_row">
                               <td class="ranking">6</td>
-                              <td class="ranking_team">New Orleans Pelicans</td>
+                              <td id="team6" class="ranking_team">New Orleans Pelicans</td>
                             </tr>
-                            <tr id="CLE" class="predict_table_row">
+                            <tr id="row7" class="predict_table_row">
                               <td class="ranking">7</td>
-                              <td class="ranking_team">Cleveland Cavaliers</td>
+                              <td id="team7" class="ranking_team">Cleveland Cavaliers</td>
                             </tr>
-                            <tr id="CHI" class="predict_table_row">
+                            <tr id="row8" class="predict_table_row">
                               <td class="ranking">8</td>
-                              <td class="ranking_team">Chicago Bulls</td>
+                              <td id="team8" class="ranking_team">Chicago Bulls</td>
                             </tr>
-                            <tr id="OKC" class="predict_table_row">
+                            <tr id="row9" class="predict_table_row">
                               <td class="ranking">9</td>
-                              <td class="ranking_team">Oklahoma City Thunder</td>
+                              <td id="team9" class="ranking_team">Oklahoma City Thunder</td>
                             </tr>
-                            <tr id="MIA" class="predict_table_row">
+                            <tr id="row10" class="predict_table_row">
                               <td class="ranking">10</td>
-                              <td class="ranking_team">Miami Heat</td>
+                              <td id="team10" class="ranking_team">Miami Heat</td>
                             </tr>
-                            <tr id="UTA" class="predict_table_row">
+                            <tr id="row11" class="predict_table_row">
                               <td class="ranking">11</td>
-                              <td class="ranking_team">Utah Jazz</td>
+                              <td id="team11" class="ranking_team">Utah Jazz</td>
                             </tr>
-                            <tr id="DAL" class="predict_table_row">
+                            <tr id="row12" class="predict_table_row">
                               <td class="ranking">12</td>
-                              <td class="ranking_team">Dallas Cowboys</td>
+                              <td id="team12" class="ranking_team">Dallas Cowboys</td>
                             </tr>
-                            <tr id="DEN" class="predict_table_row">
+                            <tr id="row13" class="predict_table_row">
                               <td class="ranking">13</td>
-                              <td class="ranking_team">Denver Nuggets</td>
+                              <td id="team13" class="ranking_team">Denver Nuggets</td>
                             </tr>
-                            <tr id="ATL" class="predict_table_row">
+                            <tr id="row14" class="predict_table_row">
                               <td class="ranking">14</td>
-                              <td class="ranking_team">Atlanta Falcons</td>
+                              <td id="team14" class="ranking_team">Atlanta Falcons</td>
                             </tr>
-                            <tr id="DET" class="predict_table_row">
+                            <tr id="row15" class="predict_table_row">
                               <td class="ranking">15</td>
-                              <td class="ranking_team">Detroit Pistons</td>
+                              <td id="team15" class="ranking_team">Detroit Pistons</td>
                             </tr>
-                            <tr id="MIL" class="predict_table_row">
+                            <tr id="row16" class="predict_table_row">
                               <td class="ranking">16</td>
-                              <td class="ranking_team">Milwaukee Bucks</td>
+                              <td id="team16" class="ranking_team">Milwaukee Bucks</td>
                             </tr>
-                            <tr id="BKN" class="predict_table_row">
+                            <tr id="row17" class="predict_table_row">
                               <td class="ranking">17</td>
-                              <td class="ranking_team">Brookyln Nets</td>
+                              <td id="team17" class="ranking_team">Brookyln Nets</td>
                             </tr>
-                            <tr id="IND" class="predict_table_row">
+                            <tr id="row18" class="predict_table_row">
                               <td class="ranking">18</td>
-                              <td class="ranking_team">Indiana Pacers</td>
+                              <td id="team18" class="ranking_team">Indiana Pacers</td>
                             </tr>
-                            <tr id="MIN" class="predict_table_row">
+                            <tr id="row19" class="predict_table_row">
                               <td class="ranking">19</td>
-                              <td class="ranking_team">Minnesota Timberwolves</td>
+                              <td id="team19" class="ranking_team">Minnesota Timberwolves</td>
                             </tr>
-                            <tr id="LAL" class="predict_table_row">
+                            <tr id="row20" class="predict_table_row">
                               <td class="ranking">20</td>
-                              <td class="ranking_team">Los Angeles Lakers</td>
+                              <td id="team20" class="ranking_team">Los Angeles Lakers</td>
                             </tr>
-                            <tr id="POR" class="predict_table_row">
+                            <tr id="row21" class="predict_table_row">
                               <td class="ranking">21</td>
-                              <td class="ranking_team">Portland Trailblazers</td>
+                              <td id="team21" class="ranking_team">Portland Trailblazers</td>
                             </tr>
-                            <tr id="NYK" class="predict_table_row">
+                            <tr id="row22" class="predict_table_row">
                               <td class="ranking">22</td>
-                              <td class="ranking_team">New York Knicks</td>
+                              <td id="team22" class="ranking_team">New York Knicks</td>
                             </tr>
-                            <tr id="ORL" class="predict_table_row">
+                            <tr id="row23" class="predict_table_row">
                               <td class="ranking">23</td>
-                              <td class="ranking_team">Orlando Magic</td>
+                              <td id="team23" class="ranking_team">Orlando Magic</td>
                             </tr>
-                            <tr id="CHA" class="predict_table_row">
+                            <tr id="row24" class="predict_table_row">
                               <td class="ranking">24</td>
-                              <td class="ranking_team">Charlotte Hornets</td>
+                              <td id="team24" class="ranking_team">Charlotte Hornets</td>
                             </tr>
-                            <tr id="WAS" class="predict_table_row">
+                            <tr id="row25" class="predict_table_row">
                               <td class="ranking">25</td>
-                              <td class="ranking_team">Washington Wizards</td>
+                              <td id="team25" class="ranking_team">Washington Wizards</td>
                             </tr>
-                            <tr id="SAS" class="predict_table_row">
+                            <tr id="row26" class="predict_table_row">
                               <td class="ranking">26</td>
-                              <td class="ranking_team">San Antonio Spurs</td>
+                              <td id="team26" class="ranking_team">San Antonio Spurs</td>
                             </tr>
-                            <tr id="SAC" class="predict_table_row">
+                            <tr id="row27" class="predict_table_row">
                               <td class="ranking">27</td>
-                              <td class="ranking_team">Sacramento Kings</td>
+                              <td id="team27" class="ranking_team">Sacramento Kings</td>
                             </tr>
-                            <tr id="PHX" class="predict_table_row">
+                            <tr id="row28" class="predict_table_row">
                               <td class="ranking">28</td>
-                              <td class="ranking_team">Phoenix Suns</td>
+                              <td id="team28" class="ranking_team">Phoenix Suns</td>
                             </tr>
-                            <tr id="MEM" class="predict_table_row">
+                            <tr id="row29" class="predict_table_row">
                               <td class="ranking">29</td>
-                              <td class="ranking_team">Memphis Grizzlies</td>
+                              <td id="team29" class="ranking_team">Memphis Grizzlies</td>
                             </tr>
-                            <tr id="LAC" class="predict_table_row">
+                            <tr id="row30" class="predict_table_row">
                               <td class="ranking">30</td>
-                              <td class="ranking_team">LA Clippers</td>
+                              <td id="team30" class="ranking_team">LA Clippers</td>
                             </tr>
                           </tbody>
                         </table>
@@ -243,11 +243,11 @@
                     <div class="col-md-7 mx-auto">
                       <h4>Chance of Winning 2018 Championship</h4>
                       <div id="perc_circle" class="mt-4"></div>
-                      <h4 style="padding-top: 40px">Our Machine Learning Model's Top 5 Strongest Stats</h4>
+                      <h4 style="padding-top: 40px">Top 5 Strongest Stats from our Machine Learning Model</h4>
                       <div class="table-responsive-md">
-                        <table class="table table-sm table-bordered table-hover pb-0" id="ranking_table">
+                        <table class="table table-dark table-sm table-bordered table-hover pb-0" id="ranking_table">
                           <thead class="thead-light" style="font-size: 13px">
-                            <th scope="col">Stat</th>
+                            <th scope="col"><a class="hover-tool" href="#" data-toggle="tooltip" title="Our Random Forest machine learning model uses'feature weights' to predict a championship winner. Each feature, or team statistic, contributes a certain overall percentage to the model's prediction.">Stat</a></th>
                             <th scope="col">Weight</th>
                           </thead>
                           <tbody>
@@ -281,74 +281,77 @@
             </div>
           </section>
 
-          <section id="services">
+          <section id="services" class="section">
             <div class="container">
               <div class="row">
-                <div class="col-md-8 mx-auto">
-                  <h1 class="text-center mb-4">Team Information</h1>
-                  <div id="team_table" class="table-responive-md" hidden>
-
-                    <div class="row mb-4 text-center">
-                      <div class="col-md-4">
-                        <img id="conference">
-                        <p id="division" class="font-weight-bold"></p>
-                      </div>
-                      <div class="col-md-4 text-center">
-                        <img id="head_coach_img" class="rounded">
-                        <p id="head_coach" class="font-weight-bold"></p>
-                      </div>
-                      <div class="col-md-4 text-center">
-                        <img id="star_player_img" class="rounded">
-                        <p id="star_player" class="font-weight-bold"></p>
-                      </div>
+                <div class="col-md mx-auto">
+                  <div class="col-md-8 mx-auto">
+                    <h1 class="text-center mb-4">Team Information</h1>
+                    <div class="lead">
+                      <p>Click on one of the 16 playoff teams above and you will view the information about the team. Included are  averaged 2018 season averaged statistics used to determine the champion. We hope you also scroll down to enjoy our gathered fun facts! </p>
                     </div>
+                    <div id="team_table" class="table-responive-md" hidden>
 
-                    <table class="table table-sm table-bordered table-hover">
-                      <thead class="thead-light">
-                        <th scope="col">Playoff Seed</th>
-                        <th scope="col">Regular Season Wins</th>
-                        <th scope="col">Regular Season Losses</th>
-                        <th scope="col">Win Percentage</th>
-                      </thead>
-                      <tbody>
-                        <td id="playoff_seed"></td>
-                        <td id="rs_season_wins"></td>
-                        <td id="rs_season_losses"></td>
-                        <td id="win_percentage"></td>
-                      </tbody>
+                      <div class="row mb-4 text-center">
+                        <div class="col-md-4">
+                          <img id="conference">
+                          <p id="division" class="font-weight-bold"></p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                          <img id="head_coach_img" class="rounded">
+                          <p id="head_coach" class="font-weight-bold"></p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                          <img id="star_player_img" class="rounded">
+                          <p id="star_player" class="font-weight-bold"></p>
+                        </div>
+                      </div>
 
-                      <thead class="thead-light">
-                        <th scope="col">Points Per Game</th>
-                        <th scope="col">Field Goal Percentage</th>
-                        <th scope="col">Free Throw Percentage</th>
-                        <th scope="col">Three Point Percentage</th>
-                      </thead>
-                      <tbody>
-                        <td id="points_per_game"></td>
-                        <td id="field_goal_percentage"></td>
-                        <td id="free_throw_percentage"></td>
-                        <td id="three_point_percentage"></td>
-                      </tbody>
+                      <table class="table table-dark table-sm table-bordered table-hover text-center">
+                        <thead class="thead-light">
+                          <th scope="col">Playoff Seed</th>
+                          <th scope="col">Regular Season Wins</th>
+                          <th scope="col">Regular Season Losses</th>
+                          <th scope="col">Win Percentage (WIN%)</th>
+                        </thead>
+                        <tbody>
+                          <td id="playoff_seed"></td>
+                          <td id="rs_season_wins"></td>
+                          <td id="rs_season_losses"></td>
+                          <td id="win_percentage"></td>
+                        </tbody>
 
-                      <thead class="thead-light">
-                        <th scope="col">Assists Per Game</th>
-                        <th scope="col">Blocks Per Game</th>
-                        <th scope="col">Rebounds Per Game</th>
-                        <th scope="col">Steals Per Game</th>
-                      </thead>
-                      <tbody>
-                        <td id="assists_per_game"></td>
-                        <td id="blocks_per_game"></td>
-                        <td id="rebounds_per_game"></td>
-                        <td id="steals_per_game"></td>
-                      </tbody>
-                    </table>
+                        <thead class="thead-light">
+                          <th scope="col">Points Per Game (PPG)</th>
+                          <th scope="col">Field Goal Percentage (FG%)</th>
+                          <th scope="col">Free Throw Percentage (FT%)</th>
+                          <th scope="col">Three Point Percentage (3P%)</th>
+                        </thead>
+                        <tbody>
+                          <td id="points_per_game"></td>
+                          <td id="field_goal_percentage"></td>
+                          <td id="free_throw_percentage"></td>
+                          <td id="three_point_percentage"></td>
+                        </tbody>
 
-                    <h4 class="font-weight-bold">Fun Fact!</h4>
-                    <p id="team_fact"></p>
+                        <thead class="thead-light">
+                          <th scope="col">Assists Per Game (APG)</th>
+                          <th scope="col">Blocks Per Game (BPG)</th>
+                          <th scope="col">Rebounds Per Game (RPG)</th>
+                          <th scope="col">Steals Per Game (SPG)</th>
+                        </thead>
+                        <tbody>
+                          <td id="assists_per_game"></td>
+                          <td id="blocks_per_game"></td>
+                          <td id="rebounds_per_game"></td>
+                          <td id="steals_per_game"></td>
+                        </tbody>
+                      </table>
+
+                      <h4 class="font-weight-bold">Fun Facts!</h4>
+                      <p id="team_fact"></p>
+                    </div>
                   </div>
-
-                  <p class="lead">Please select a team above to view information about the team's leaders, various season statistics, and fun facts.</p>
                 </div>
               </div>
             </div>
@@ -359,12 +362,12 @@
 
         <div id="live_score" class="col-sm-4">
           <div class="container-fluid text-center">
-            <section id="live" class="pb-0">
+            <section id="live" class="pb-0 section">
               <h1 class="mb-4">Live Playoff Scoreboard</h1>
               <iframe class="col-md-12 mr-auto" src="/live" height="500" width="400" frameborder="0" scrolling="yes"></iframe>
             </section>
-            <section id="twitter" class="pt-0">
-              <a id="twitter" class="twitter-timeline" data-width="400" data-height="800" data-theme="dark" href="https://twitter.com/sungwonb/lists/nba-tweets?ref_src=twsrc%5Etfw">Follow tweets covering the playoffs</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <section id="twitter" class="pt-0 twitter-section">
+              <a id="twitter" class="twitter-timeline" data-width="400" data-height="720" data-theme="dark" href="https://twitter.com/sungwonb/lists/nba-tweets?ref_src=twsrc%5Etfw">Follow tweets covering the playoffs</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </section>
           </div>
         </div>
@@ -400,10 +403,8 @@
                       <img class="card-img-top" src="../static/images/creator_profiles/sungwon.jpg" alt="Card image cap">
                       <div class="card-body text-dark">
                         <h5 class="card-title">Sungw0n</h5>
-                        <p class="card-text mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat.</p>
+                        <p class="card-text mb-5">At your service to obliterate your problems!</p>
+                        <center><img class="img-thumbnail img-fluid" src="../static/images/creator_profiles/sungwon.png" height="100" width="100"></center>
                         <p class="card-text card_links"><span class="text-muted"><a href="https://github.com/sungwonb"><i class="fab fa-github fa-3x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.linkedin.com/in/sungwonbyun/"><i class="fab fa-linkedin-in fa-3x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#"><i class="fas fa-home fa-3x"></i></a></span></p>
                       </div>
                     </div>
