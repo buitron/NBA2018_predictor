@@ -52,6 +52,9 @@
               <a class="nav-link js-scroll-trigger" href="#live">Live Scores!</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#twitter">Twitter Feed</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
             </li>
           </ul>
@@ -238,7 +241,7 @@
                     <div class="col-md-5 mx-auto">
                       <h4>Chance of Winning 2018 Championship</h4>
                       <div id="perc_circle" class="mt-4"></div>
-                      <h4 style="padding-top: 40px">Our Random Forest Model's Top 5 Strongest Features</h4>
+                      <h4 style="padding-top: 40px">Our Machine Learning Model's Top 5 Strongest Stats</h4>
                       <div class="table-responsive-md">
                         <table class="table table-sm table-bordered table-hover pb-0" id="ranking_table">
                           <thead class="thead-light" style="font-size: 13px">
@@ -282,16 +285,6 @@
                 <div class="col-md-8 mx-auto">
                   <h1 class="text-center mb-4">Team Information</h1>
                   <div id="team_table" class="table-responive-md" hidden>
-                    <table class="table table-sm table-bordered">
-                      <thead class="thead-light">
-                        <th scope="col">Head Coach</th>
-                        <th scope="col">Star Player</th>
-                      </thead>
-                      <tbody>
-                        <td>soon deprecated</td>
-                        <td>soon deprecated</td>
-                      </tbody>
-                    </table>
 
                     <div class="row mb-4 text-center">
                       <div class="col-md-4">
@@ -299,11 +292,11 @@
                         <p id="division" class="font-weight-bold"></p>
                       </div>
                       <div class="col-md-4 text-center">
-                        <img id="head_coach_img">
+                        <img id="head_coach_img" class="rounded">
                         <p id="head_coach" class="font-weight-bold"></p>
                       </div>
                       <div class="col-md-4 text-center">
-                        <img id="star_player_img">
+                        <img id="star_player_img" class="rounded">
                         <p id="star_player" class="font-weight-bold"></p>
                       </div>
                     </div>
@@ -363,14 +356,15 @@
         </div>
 
         <div id="live_score" class="col-sm-4">
-          <section id="live">
-            <div class="container-fluid text-center">
+          <div class="container-fluid text-center">
+            <section id="live">
               <h1 class="mb-4">Live Playoff Scoreboard</h1>
               <iframe class="col-md-12 mr-auto" src="/live" height="260" width="400" frameborder="0" scrolling="yes"></iframe>
-              <a class="twitter-timeline" data-width="400" data-height="600" data-theme="dark" href="https://twitter.com/sungwonb/lists/nba-tweets?ref_src=twsrc%5Etfw">Follow tweets covering the playoffs</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
-            </div>
-          </section>
-
+            </section>
+            <section id="twitter">
+              <a id="twitter" class="twitter-timeline" data-width="400" data-height="800" data-theme="dark" href="https://twitter.com/sungwonb/lists/nba-tweets?ref_src=twsrc%5Etfw">Follow tweets covering the playoffs</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+            </section>
+          </div>
         </div>
         <div id="contact_us" class="col-sm-12">
           <hr class="mt-0">
