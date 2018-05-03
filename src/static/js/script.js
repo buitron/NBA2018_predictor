@@ -72,7 +72,7 @@ jQuery(function ($) {
 
                     $('.predict_table_row').css({ 'font-size': '', 'font-weight': '', 'outline-style': '', 'outline-color': ''});
                     
-                    $('#row' + element[4]).css({ 'vertical-align': 'middle', 'font-size': 14, 'font-weight': 800, 'outline-style': 'solid', 'outline-color': 'red'});
+                    $('#row' + element[4]).css({ 'vertical-align': 'middle', 'font-size': 16, 'font-weight': 800, 'outline-style': 'solid', 'outline-color': 'red'});
 
                     for (i=1; i<6; i++){
                         $('#feature'+ i).text(data['feature_importance'][i-1][1]);
