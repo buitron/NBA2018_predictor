@@ -56,6 +56,8 @@ jQuery(function ($) {
             var counter = 0;
             data['team_prediction'].forEach(function(element) {
                 counter ++;
+                
+                $('#team'+counter).text(element[2]); 
 
                 if (element[3] == previousClass) {
                     $('#champion').text(element[1]);
@@ -63,11 +65,10 @@ jQuery(function ($) {
                     $('#ranked').text(counter);
 
                     $('.predict_table_row').css({ 'font-size': '', 'font-weight': '', 'outline-style': '', 'outline-color': ''});
-                    $('#' + element[3]).css({ 'vertical-align': 'middle', 'font-size': 14, 'font-weight': 800, 'outline-style': 'solid', 'outline-color': 'red'});
+                    
+                    $('#row' + element[4]).css({ 'vertical-align': 'middle', 'font-size': 14, 'font-weight': 800, 'outline-style': 'solid', 'outline-color': 'red'});
 
-                    for (i=1; i<6; i++) {
-                        console.log(Math.round(data['feature_importance'][i][0]));
-
+                    for (i=1; i<6; i++){
                         $('#feature'+ i).text(data['feature_importance'][i-1][1]);
                         $('#weight'+ i).text(Math.round(data['feature_importance'][i-1][0]*100)+'%');
                     };
