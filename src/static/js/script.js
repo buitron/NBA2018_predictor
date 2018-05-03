@@ -57,8 +57,8 @@ jQuery(function ($) {
                     $('#predict_perc').text(element[0]);
                     $('#ranked').text(counter);
 
-                    $('.predict_table').css({ 'font-size': '', 'font-weight': '', 'outline-style': '', 'outline-color': ''})
-                    $('#' + element[3]).css({ 'font-size': 14, 'font-weight': 800, 'outline-style': 'solid', 'outline-color': 'red'})
+                    $('.predict_table_row').css({ 'font-size': '', 'font-weight': '', 'outline-style': '', 'outline-color': ''})
+                    $('#' + element[3]).css({ 'vertical-align': 'middle', 'font-size': 14, 'font-weight': 800, 'outline-style': 'solid', 'outline-color': 'red'})
 
                     // d3 percent circle
 

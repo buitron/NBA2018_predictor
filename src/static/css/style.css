@@ -1,3 +1,13 @@
+/*ranking table*/
+#ranking_table {
+	border-radius: 2;
+}
+
+section {
+	padding-top: 75px;
+	padding-bottom: 75px;
+}
+
 /*team configurations*/
 
 #team.BOS {
