@@ -101,13 +101,13 @@
               <div class="row">
                 <div class="col-md-8 mx-auto">
                   <h1 id="team_name" class="mb-4">Forecast Results</h1>
-                  <p class="lead" style="text-align: left">Our Random Forest model generates a team's probability of winning the 2018 NBA championship. Please select a team above to view its chances.</p>
+                  <p class="lead" style="text-align: left">Our Random Forest (RF) model generates a team's probability of winning the 2018 NBA championship. Please select a team above to view its chances.</p>
                   <div id="team_predict" class="row" hidden>
                     <div class="col-md-7 mx-auto">
                       <div class="table-responsive-md">
                         <table class="table table-sm table-bordered table-hover pb-0" id="ranking_table">
                           <thead class="thead-light" style="font-size: 13px">
-                            <th scope="col">ML Model Ranking</th>
+                            <th scope="col">RF Model Ranking</th>
                             <th scope="col">Team</th>
                           </thead>
                           <tbody style="font-size: 9px">
@@ -238,6 +238,37 @@
                     <div class="col-md-5 mx-auto">
                       <h4>Chance of Winning 2018 Championship</h4>
                       <div id="perc_circle" class="mt-4"></div>
+                      <h4 style="padding-top: 40px">Our Random Forest Model's Top 5 Strongest Features</h4>
+                      <div class="table-responsive-md">
+                        <table class="table table-sm table-bordered table-hover pb-0" id="ranking_table">
+                          <thead class="thead-light" style="font-size: 13px">
+                            <th scope="col">Feature</th>
+                            <th scope="col">Weight</th>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td id="feature1"></td>
+                              <td id="weight1"></td>
+                            </tr>
+                            <tr>
+                              <td id="feature2"></td>
+                              <td id="weight2"></td>
+                            </tr>
+                            <tr>
+                              <td id="feature3"></td>
+                              <td id="weight3"></td>
+                            </tr>
+                            <tr>
+                              <td id="feature4"></td>
+                              <td id="weight4"></td>
+                            </tr>
+                            <tr>
+                              <td id="feature5"></td>
+                              <td id="weight5"></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </div>
                   </div>
                 </div>
