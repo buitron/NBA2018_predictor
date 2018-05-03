@@ -6,6 +6,7 @@ $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();   
 });
 
+
 jQuery(function ($) {
     $('.team_btn').click(function () {
 
