@@ -181,6 +181,7 @@ hr {
 }
 
 #team_buttons {
+	background-color: rgba(0, 0, 0, 0.6);
 	position: absolute;
 	bottom: 10%;
 	width: 80%;
