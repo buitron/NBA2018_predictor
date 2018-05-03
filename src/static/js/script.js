@@ -68,8 +68,8 @@ jQuery(function ($) {
                     for (i=1; i<6; i++) {
                         console.log(Math.round(data['feature_importance'][i][0]));
 
-                        $('#feature'+ i).text(data['feature_importance'][i][1]);
-                        $('#weight'+ i).text(Math.round(data['feature_importance'][i][0]*100)+'%');
+                        $('#feature'+ i).text(data['feature_importance'][i-1][1]);
+                        $('#weight'+ i).text(Math.round(data['feature_importance'][i-1][0]*100)+'%');
                     };
 
                     // d3 percent circle
