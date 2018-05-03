@@ -99,20 +99,20 @@
     <div id="bodydiv" class="container-fluid">
       <div class="row">
         <div id="team" class="col-sm-8">
-          <section id="about" class="pb-0">
+          <section id="about" class="pb-0 section">
             <div class="container text-center">
               <div class="row">
                 <div class="col-md mx-auto">
                   <h1 id="team_name" class="mb-4">Forecast Results</h1>
                   <div class="col-md-8 mx-auto">
-                    <p class="lead" style="text-align: left">Our Random Forest (RF) model generates a team's probability of winning the 2018 NBA championship. Please select a team above to view its chances.</p>
+                    <p class="lead" style="text-align: left">Welcome to our NBA 2018 Champion Forecaster! Pick one of the 16 playoff teams by clicking on a team logo above. Our Random Forest (RF) machine learning model will generate that team's probability of winning the 2018 NBA championship, ranking among all 30 NBA teams.</p>
                   </div>
                   <div id="team_predict" class="row" hidden>
                     <div class="col-md-4 mx-auto">
                       <div class="table-responsive-md">
-                        <table class="table table-sm table-bordered table-hover pb-0" id="ranking_table">
+                        <table class="table table-dark table-sm table-bordered table-hover pb-0" id="ranking_table">
                           <thead class="thead-light" style="font-size: 13px">
-                            <th scope="col">RF Model Ranking</th>
+                            <th scope="col"><a class="hover-tool" href="#" data-toggle="tooltip" title="We used a Random Forest machine learning model to generate predictions and probabilities for NBA teams winning the championship">RF Model Ranking</a></th>
                             <th scope="col">Team</th>
                           </thead>
                           <tbody style="font-size: 9px">
@@ -245,9 +245,9 @@
                       <div id="perc_circle" class="mt-4"></div>
                       <h4 style="padding-top: 40px">Top 5 Strongest Stats from our Machine Learning Model</h4>
                       <div class="table-responsive-md">
-                        <table class="table table-sm table-bordered table-hover pb-0" id="ranking_table">
+                        <table class="table table-dark table-sm table-bordered table-hover pb-0" id="ranking_table">
                           <thead class="thead-light" style="font-size: 13px">
-                            <th scope="col">Stat</th>
+                            <th scope="col"><a class="hover-tool" href="#" data-toggle="tooltip" title="Our Random Forest machine learning model uses'feature weights' to predict a championship winner. Each feature, or team statistic, contributes a certain overall percentage to the model's prediction.">Stat</a></th>
                             <th scope="col">Weight</th>
                           </thead>
                           <tbody>
@@ -281,74 +281,77 @@
             </div>
           </section>
 
-          <section id="services">
+          <section id="services" class="section">
             <div class="container">
               <div class="row">
-                <div class="col-md-8 mx-auto">
-                  <h1 class="text-center mb-4">Team Information</h1>
-                  <div id="team_table" class="table-responive-md" hidden>
-
-                    <div class="row mb-4 text-center">
-                      <div class="col-md-4">
-                        <img id="conference">
-                        <p id="division" class="font-weight-bold"></p>
-                      </div>
-                      <div class="col-md-4 text-center">
-                        <img id="head_coach_img" class="rounded">
-                        <p id="head_coach" class="font-weight-bold"></p>
-                      </div>
-                      <div class="col-md-4 text-center">
-                        <img id="star_player_img" class="rounded">
-                        <p id="star_player" class="font-weight-bold"></p>
-                      </div>
+                <div class="col-md mx-auto">
+                  <div class="col-md-8 mx-auto">
+                    <h1 class="text-center mb-4">Team Information</h1>
+                    <div class="lead">
+                      <p>Click on one of the 16 playoff teams above and you will view the information about the team. Included are  averaged 2018 season averaged statistics used to determine the champion. We hope you also scroll down to enjoy our gathered fun facts! </p>
                     </div>
+                    <div id="team_table" class="table-responive-md" hidden>
 
-                    <table class="table table-sm table-bordered table-hover">
-                      <thead class="thead-light">
-                        <th scope="col">Playoff Seed</th>
-                        <th scope="col">Regular Season Wins</th>
-                        <th scope="col">Regular Season Losses</th>
-                        <th scope="col">Win Percentage</th>
-                      </thead>
-                      <tbody>
-                        <td id="playoff_seed"></td>
-                        <td id="rs_season_wins"></td>
-                        <td id="rs_season_losses"></td>
-                        <td id="win_percentage"></td>
-                      </tbody>
+                      <div class="row mb-4 text-center">
+                        <div class="col-md-4">
+                          <img id="conference">
+                          <p id="division" class="font-weight-bold"></p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                          <img id="head_coach_img" class="rounded">
+                          <p id="head_coach" class="font-weight-bold"></p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                          <img id="star_player_img" class="rounded">
+                          <p id="star_player" class="font-weight-bold"></p>
+                        </div>
+                      </div>
 
-                      <thead class="thead-light">
-                        <th scope="col">Points Per Game</th>
-                        <th scope="col">Field Goal Percentage</th>
-                        <th scope="col">Free Throw Percentage</th>
-                        <th scope="col">Three Point Percentage</th>
-                      </thead>
-                      <tbody>
-                        <td id="points_per_game"></td>
-                        <td id="field_goal_percentage"></td>
-                        <td id="free_throw_percentage"></td>
-                        <td id="three_point_percentage"></td>
-                      </tbody>
+                      <table class="table table-dark table-sm table-bordered table-hover text-center">
+                        <thead class="thead-light">
+                          <th scope="col">Playoff Seed</th>
+                          <th scope="col">Regular Season Wins</th>
+                          <th scope="col">Regular Season Losses</th>
+                          <th scope="col">Win Percentage (WIN%)</th>
+                        </thead>
+                        <tbody>
+                          <td id="playoff_seed"></td>
+                          <td id="rs_season_wins"></td>
+                          <td id="rs_season_losses"></td>
+                          <td id="win_percentage"></td>
+                        </tbody>
 
-                      <thead class="thead-light">
-                        <th scope="col">Assists Per Game</th>
-                        <th scope="col">Blocks Per Game</th>
-                        <th scope="col">Rebounds Per Game</th>
-                        <th scope="col">Steals Per Game</th>
-                      </thead>
-                      <tbody>
-                        <td id="assists_per_game"></td>
-                        <td id="blocks_per_game"></td>
-                        <td id="rebounds_per_game"></td>
-                        <td id="steals_per_game"></td>
-                      </tbody>
-                    </table>
+                        <thead class="thead-light">
+                          <th scope="col">Points Per Game (PPG)</th>
+                          <th scope="col">Field Goal Percentage (FG%)</th>
+                          <th scope="col">Free Throw Percentage (FT%)</th>
+                          <th scope="col">Three Point Percentage (3P%)</th>
+                        </thead>
+                        <tbody>
+                          <td id="points_per_game"></td>
+                          <td id="field_goal_percentage"></td>
+                          <td id="free_throw_percentage"></td>
+                          <td id="three_point_percentage"></td>
+                        </tbody>
 
-                    <h4 class="font-weight-bold">Fun Fact!</h4>
-                    <p id="team_fact"></p>
+                        <thead class="thead-light">
+                          <th scope="col">Assists Per Game (APG)</th>
+                          <th scope="col">Blocks Per Game (BPG)</th>
+                          <th scope="col">Rebounds Per Game (RPG)</th>
+                          <th scope="col">Steals Per Game (SPG)</th>
+                        </thead>
+                        <tbody>
+                          <td id="assists_per_game"></td>
+                          <td id="blocks_per_game"></td>
+                          <td id="rebounds_per_game"></td>
+                          <td id="steals_per_game"></td>
+                        </tbody>
+                      </table>
+
+                      <h4 class="font-weight-bold">Fun Facts!</h4>
+                      <p id="team_fact"></p>
+                    </div>
                   </div>
-
-                  <p class="lead">Please select a team above to view information about the team's leaders, various season statistics, and fun facts.</p>
                 </div>
               </div>
             </div>
@@ -360,13 +363,14 @@
         <div id="live_score" class="col-sm-4">
           <div class="container-fluid text-center">
             <section id="live" class="pb-4">
+            <!-- <section id="live" class="pb-0 section"> -->
               <h1 class="mb-4">Live Playoff Scoreboard</h1>
               <div class="px-5">
                 <iframe class="col-md-12 mr-auto" src="/live" height="300" width="400" frameborder="0" scrolling="yes"></iframe>
               </div>
             </section>
-            <section id="twitter" class="pt-0">
-              <a id="twitter" class="twitter-timeline" data-width="400" data-height="800" data-theme="dark" href="https://twitter.com/sungwonb/lists/nba-tweets?ref_src=twsrc%5Etfw">Follow tweets covering the playoffs</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <section id="twitter" class="pt-0 twitter-section">
+              <a id="twitter" class="twitter-timeline" data-width="400" data-height="720" data-theme="dark" href="https://twitter.com/sungwonb/lists/nba-tweets?ref_src=twsrc%5Etfw">Follow tweets covering the playoffs</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </section>
           </div>
         </div>
@@ -402,11 +406,17 @@
                       <img class="card-img-top" src="../static/images/creator_profiles/sungwon.jpg" alt="Card image cap">
                       <div class="card-body text-dark">
                         <h5 class="card-title">Sungw0n</h5>
+<<<<<<< HEAD
                         <p class="card-text mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                         consequat.</p>
                         <p class="card-text card_links"><span class="text-muted"><a href="https://github.com/sungwonb" target="_blank"><i class="fab fa-github fa-3x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.linkedin.com/in/sungwonbyun/" target="_blank"><i class="fab fa-linkedin-in fa-3x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#"><i class="fas fa-home fa-3x"></i></a></span></p>
+=======
+                        <p class="card-text mb-5">At your service to obliterate your problems!</p>
+                        <center><img class="img-thumbnail img-fluid" src="../static/images/creator_profiles/sungwon.png" height="100" width="100"></center>
+                        <p class="card-text card_links"><span class="text-muted"><a href="https://github.com/sungwonb"><i class="fab fa-github fa-3x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.linkedin.com/in/sungwonbyun/"><i class="fab fa-linkedin-in fa-3x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#"><i class="fas fa-home fa-3x"></i></a></span></p>
+>>>>>>> 732d778e0a1a51f5ec5cf2fe641e669e6bd3bb37
                       </div>
                     </div>
 

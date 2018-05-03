@@ -23,7 +23,7 @@
     <div id="live_table" class="table-responive-md m-2">
         
         {% for l in lf %}
-            <table class="table table-sm table-bordered">
+            <table class="table table-dark table-sm table-bordered">
                 <thead class="thead-light">
                     <tr class="text-center">
                         <th scope="col" colspan="2">
@@ -51,11 +51,11 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="table-light">
+                    <tr>
                         <td id="home"><img src="../static/images/team_logos_small/{{ l.hometeam_abbrev }}.png"> {{ l.hometeam_abbrev }}</td>
                         <td id="away"><img src="../static/images/team_logos_small/{{ l.awayteam_abbrev }}.png"> {{ l.awayteam_abbrev }}</td>
                     </tr>
-                    <tr class="table-light">
+                    <tr>
                         <td>{{ l.hometeam_score }}</td>
                         <td>{{ l.awayteam_score }}</td>
                     </tr>

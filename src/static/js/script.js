@@ -1,5 +1,11 @@
 var previousClass;
 
+
+// activate hover-messages using tooltip
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+
 jQuery(function ($) {
     $('.team_btn').click(function () {
 
@@ -56,17 +62,17 @@ jQuery(function ($) {
             var counter = 0;
             data['team_prediction'].forEach(function(element) {
                 counter ++;
-                
+
                 $('#team'+counter).text(element[2]); 
 
                 if (element[3] == previousClass) {
-                    $('#champion').text(element[1]);
-                    $('#predict_perc').text(element[0]);
-                    $('#ranked').text(counter);
+
+                    if (element[4] == 1) {
+                        $('#team_name').text(element[2] + " (Winner!)");
+                    };
 
                     $('.predict_table_row').css({ 'font-size': '', 'font-weight': '', 'outline-style': '', 'outline-color': ''});
-                    
-                    $('#row' + element[4]).css({ 'vertical-align': 'middle', 'font-size': 14, 'font-weight': 800, 'outline-style': 'solid', 'outline-color': 'red'});
+                    $('#row' + element[4]).css({ 'vertical-align': 'middle', 'font-size': 16, 'font-weight': 800, 'outline-style': 'solid', 'outline-color': 'red'});
 
                     for (i=1; i<6; i++){
                         $('#feature'+ i).text(data['feature_importance'][i-1][1]);
@@ -82,7 +88,7 @@ jQuery(function ($) {
                         transition = 200,
                         percent = element[0] * 100,
                         width = window.innerWidth - 1230,
-                        height = window.innerHeight - 588;
+                        height = window.innerHeight - 500;
 
                     var dataset = {
                                 lower: calcPercent(0),
