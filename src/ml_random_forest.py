@@ -52,7 +52,9 @@ def finals():
 	X_2018 = pd.read_csv('static/data/regular_season/2018_nba_stats_rs.csv')
 	X_2018.drop(['TEAM', 'GP', 'MIN'], axis=1, inplace=True)
 
-
-	results['team_prediction'] = sorted(zip([float("{:.4f}".format(perc[1])) for perc in rf.predict_proba(X_2018).tolist()], rf.predict(X_2018).tolist(), complete_2018['TEAM'].tolist(),[team_abr[team] for team in complete_2018['TEAM'].tolist()]), reverse=True)
+	temp_list = sorted(zip([float("{:.4f}".format(perc[1])) for perc in rf.predict_proba(X_2018).tolist()], rf.predict(X_2018).tolist(), complete_2018['TEAM'].tolist(),[team_abr[team] for team in complete_2018['TEAM'].tolist()]), reverse=True)
+	temp_df = pd.DataFrame(temp_list)
+	temp_df = pd.concat([temp_df,pd.DataFrame([x+1 for x in range(30)])],axis=1)
+	results['team_prediction'] = temp_df.apply(tuple,axis=1).tolist()
 
 	return(results)
