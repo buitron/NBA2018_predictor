@@ -88,7 +88,7 @@ jQuery(function ($) {
                         transition = 200,
                         percent = element[0] * 100,
                         width = window.innerWidth - 1230,
-                        height = window.innerHeight - 588;
+                        height = window.innerHeight - 500;
 
                     var dataset = {
                                 lower: calcPercent(0),
