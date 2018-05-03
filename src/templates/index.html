@@ -33,10 +33,46 @@
 
   <body id="page-top">
 
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="modal fade" id="myModal">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3>Machine Learning Model Working in the Background Creation</h3>
+                </div>
+                <div class="modal-body">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-md-10">
+                        <img src="../static/images/notebook_1.png" class="img-fluid">
+                        <img src="../static/images/notebook_2.png" class="img-fluid">
+                        <img src="../static/images/notebook_3.png" class="img-fluid">
+                      </div>
+                      <div class="col-md-2">
+                        <p>Here is a techincal breakdown of our <strong>Random Forest Classifier Model</strong>. We are using the lovely Python Scikit-Learn Module/Library to build this model. For further explanation please reach out to the <em>Creators</em> listed at the bottom of the page: <mark>Contact Us</mark>. Thank you!!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
     <!-- Navigation -->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="{{ url_for('static', filename='images/nba_logos/NBA_logo.png') }}"> NBA Forecaster</a>
+        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal">Behind the Scenes</button>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
