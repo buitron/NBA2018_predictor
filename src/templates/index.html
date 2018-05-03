@@ -95,147 +95,151 @@
 
     <div id="bodydiv" class="container-fluid">
       <div class="row">
-
         <div id="team" class="col-sm-8">
           <section id="about" class="pb-0">
             <div class="container text-center">
-              <h1 id="team_name" class="mb-4">Forecast Results</h1>
-              <div id="team_predict" class="row" hidden>
-                <div class="col-md-4 mx-auto">
-                  <div class="table-responsive-md">
-                    <table class="table table-sm table-bordered table-hover p-0">
-                      <thead class="thead-light" style="font-size: 14px">
-                        <th scope="col">Ranking</th>
-                        <th scope="col">Team</th>
-                      </thead>
-                      <tbody style="font-size: 8px">
-                        <tr id="HOU" class="predict_table">
-                          <td class="ranking">1</td>
-                          <td class="ranking_team">Houston Rockets</td>
-                        </tr>
-                        <tr id="GSW" class="predict_table">
-                          <td class="ranking">2</td>
-                          <td class="ranking_team">Golden State Warriors</td>
-                        </tr>
-                        <tr id="TOR" class="predict_table">
-                          <td class="ranking">3</td>
-                          <td class="ranking_team">Toronto Raptors</td>
-                        </tr>
-                        <tr id="BOS" class="predict_table">
-                          <td class="ranking">4</td>
-                          <td class="ranking_team">Boston Celtics</td>
-                        </tr>
-                        <tr id="PHI" class="predict_table">
-                          <td class="ranking">5</td>
-                          <td class="ranking_team">Philadelphia Sixers</td>
-                        </tr>
-                        <tr id="NOP" class="predict_table">
-                          <td class="ranking">6</td>
-                          <td class="ranking_team">New Orleans Pelicans</td>
-                        </tr>
-                        <tr id="CLE" class="predict_table">
-                          <td class="ranking">7</td>
-                          <td class="ranking_team">Cleveland Cavaliers</td>
-                        </tr>
-                        <tr id="CHI" class="predict_table">
-                          <td class="ranking">8</td>
-                          <td class="ranking_team">Chicago Bulls</td>
-                        </tr>
-                        <tr id="OKC" class="predict_table">
-                          <td class="ranking">9</td>
-                          <td class="ranking_team">Oklahoma City Thunder</td>
-                        </tr>
-                        <tr id="MIA" class="predict_table">
-                          <td class="ranking">10</td>
-                          <td class="ranking_team">Miami Heat</td>
-                        </tr>
-                        <tr id="UTA" class="predict_table">
-                          <td class="ranking">11</td>
-                          <td class="ranking_team">Utah Jazz</td>
-                        </tr>
-                        <tr id="DAL" class="predict_table">
-                          <td class="ranking">12</td>
-                          <td class="ranking_team">Dallas Cowboys</td>
-                        </tr>
-                        <tr id="DEN" class="predict_table">
-                          <td class="ranking">13</td>
-                          <td class="ranking_team">Denver Nuggets</td>
-                        </tr>
-                        <tr id="ATL" class="predict_table">
-                          <td class="ranking">14</td>
-                          <td class="ranking_team">Atlanta Falcons</td>
-                        </tr>
-                        <tr id="DET" class="predict_table">
-                          <td class="ranking">15</td>
-                          <td class="ranking_team">Detroit Pistons</td>
-                        </tr>
-                        <tr id="MIL" class="predict_table">
-                          <td class="ranking">16</td>
-                          <td class="ranking_team">Milwaukee Bucks</td>
-                        </tr>
-                        <tr id="BKN" class="predict_table">
-                          <td class="ranking">17</td>
-                          <td class="ranking_team">Brookyln Nets</td>
-                        </tr>
-                        <tr id="IND" class="predict_table">
-                          <td class="ranking">18</td>
-                          <td class="ranking_team">Indiana Pacers</td>
-                        </tr>
-                        <tr id="MIN" class="predict_table">
-                          <td class="ranking">19</td>
-                          <td class="ranking_team">Minnesota Timberwolves</td>
-                        </tr>
-                        <tr id="LAL" class="predict_table">
-                          <td class="ranking">20</td>
-                          <td class="ranking_team">Los Angeles Lakers</td>
-                        </tr>
-                        <tr id="POR" class="predict_table">
-                          <td class="ranking">21</td>
-                          <td class="ranking_team">Portland Trailblazers</td>
-                        </tr>
-                        <tr id="NYK" class="predict_table">
-                          <td class="ranking">22</td>
-                          <td class="ranking_team">New York Knicks</td>
-                        </tr>
-                        <tr id="ORL" class="predict_table">
-                          <td class="ranking">23</td>
-                          <td class="ranking_team">Orlando Magic</td>
-                        </tr>
-                        <tr id="CHA" class="predict_table">
-                          <td class="ranking">24</td>
-                          <td class="ranking_team">Charlotte Hornets</td>
-                        </tr>
-                        <tr id="WAS" class="predict_table">
-                          <td class="ranking">25</td>
-                          <td class="ranking_team">Washington Wizards</td>
-                        </tr>
-                        <tr id="SAS" class="predict_table">
-                          <td class="ranking">26</td>
-                          <td class="ranking_team">San Antonio Spurs</td>
-                        </tr>
-                        <tr id="SAC" class="predict_table">
-                          <td class="ranking">27</td>
-                          <td class="ranking_team">Sacramento Kings</td>
-                        </tr>
-                        <tr id="PHX" class="predict_table">
-                          <td class="ranking">28</td>
-                          <td class="ranking_team">Phoenix Suns</td>
-                        </tr>
-                        <tr id="MEM" class="predict_table">
-                          <td class="ranking">29</td>
-                          <td class="ranking_team">Memphis Grizzlies</td>
-                        </tr>
-                        <tr id="LAC" class="predict_table">
-                          <td class="ranking">30</td>
-                          <td class="ranking_team">LA Clippers</td>
-                        </tr>
-                      </tbody>
-                    </table>
+              <div class="row">
+                <div class="col-md-8 mx-auto">
+                  <h1 id="team_name" class="mb-4">Forecast Results</h1>
+                  <p class="lead" style="text-align: left">Our Random Forest model generates a team's probability of winning the 2018 NBA championship. Please select a team above to view its chances.</p>
+                  <div id="team_predict" class="row" hidden>
+                    <div class="col-md-7 mx-auto">
+                      <div class="table-responsive-md">
+                        <table class="table table-sm table-bordered table-hover pb-0" id="ranking_table">
+                          <thead class="thead-light" style="font-size: 13px">
+                            <th scope="col">ML Model Ranking</th>
+                            <th scope="col">Team</th>
+                          </thead>
+                          <tbody style="font-size: 9px">
+                            <tr id="HOU" class="predict_table_row">
+                              <td class="ranking">1</td>
+                              <td class="ranking_team">Houston Rockets</td>
+                            </tr>
+                            <tr id="GSW" class="predict_table_row">
+                              <td class="ranking">2</td>
+                              <td class="ranking_team">Golden State Warriors</td>
+                            </tr>
+                            <tr id="TOR" class="predict_table_row">
+                              <td class="ranking">3</td>
+                              <td class="ranking_team">Toronto Raptors</td>
+                            </tr>
+                            <tr id="BOS" class="predict_table_row">
+                              <td class="ranking">4</td>
+                              <td class="ranking_team">Boston Celtics</td>
+                            </tr>
+                            <tr id="PHI" class="predict_table_row">
+                              <td class="ranking">5</td>
+                              <td class="ranking_team">Philadelphia Sixers</td>
+                            </tr>
+                            <tr id="NOP" class="predict_table_row">
+                              <td class="ranking">6</td>
+                              <td class="ranking_team">New Orleans Pelicans</td>
+                            </tr>
+                            <tr id="CLE" class="predict_table_row">
+                              <td class="ranking">7</td>
+                              <td class="ranking_team">Cleveland Cavaliers</td>
+                            </tr>
+                            <tr id="CHI" class="predict_table_row">
+                              <td class="ranking">8</td>
+                              <td class="ranking_team">Chicago Bulls</td>
+                            </tr>
+                            <tr id="OKC" class="predict_table_row">
+                              <td class="ranking">9</td>
+                              <td class="ranking_team">Oklahoma City Thunder</td>
+                            </tr>
+                            <tr id="MIA" class="predict_table_row">
+                              <td class="ranking">10</td>
+                              <td class="ranking_team">Miami Heat</td>
+                            </tr>
+                            <tr id="UTA" class="predict_table_row">
+                              <td class="ranking">11</td>
+                              <td class="ranking_team">Utah Jazz</td>
+                            </tr>
+                            <tr id="DAL" class="predict_table_row">
+                              <td class="ranking">12</td>
+                              <td class="ranking_team">Dallas Cowboys</td>
+                            </tr>
+                            <tr id="DEN" class="predict_table_row">
+                              <td class="ranking">13</td>
+                              <td class="ranking_team">Denver Nuggets</td>
+                            </tr>
+                            <tr id="ATL" class="predict_table_row">
+                              <td class="ranking">14</td>
+                              <td class="ranking_team">Atlanta Falcons</td>
+                            </tr>
+                            <tr id="DET" class="predict_table_row">
+                              <td class="ranking">15</td>
+                              <td class="ranking_team">Detroit Pistons</td>
+                            </tr>
+                            <tr id="MIL" class="predict_table_row">
+                              <td class="ranking">16</td>
+                              <td class="ranking_team">Milwaukee Bucks</td>
+                            </tr>
+                            <tr id="BKN" class="predict_table_row">
+                              <td class="ranking">17</td>
+                              <td class="ranking_team">Brookyln Nets</td>
+                            </tr>
+                            <tr id="IND" class="predict_table_row">
+                              <td class="ranking">18</td>
+                              <td class="ranking_team">Indiana Pacers</td>
+                            </tr>
+                            <tr id="MIN" class="predict_table_row">
+                              <td class="ranking">19</td>
+                              <td class="ranking_team">Minnesota Timberwolves</td>
+                            </tr>
+                            <tr id="LAL" class="predict_table_row">
+                              <td class="ranking">20</td>
+                              <td class="ranking_team">Los Angeles Lakers</td>
+                            </tr>
+                            <tr id="POR" class="predict_table_row">
+                              <td class="ranking">21</td>
+                              <td class="ranking_team">Portland Trailblazers</td>
+                            </tr>
+                            <tr id="NYK" class="predict_table_row">
+                              <td class="ranking">22</td>
+                              <td class="ranking_team">New York Knicks</td>
+                            </tr>
+                            <tr id="ORL" class="predict_table_row">
+                              <td class="ranking">23</td>
+                              <td class="ranking_team">Orlando Magic</td>
+                            </tr>
+                            <tr id="CHA" class="predict_table_row">
+                              <td class="ranking">24</td>
+                              <td class="ranking_team">Charlotte Hornets</td>
+                            </tr>
+                            <tr id="WAS" class="predict_table_row">
+                              <td class="ranking">25</td>
+                              <td class="ranking_team">Washington Wizards</td>
+                            </tr>
+                            <tr id="SAS" class="predict_table_row">
+                              <td class="ranking">26</td>
+                              <td class="ranking_team">San Antonio Spurs</td>
+                            </tr>
+                            <tr id="SAC" class="predict_table_row">
+                              <td class="ranking">27</td>
+                              <td class="ranking_team">Sacramento Kings</td>
+                            </tr>
+                            <tr id="PHX" class="predict_table_row">
+                              <td class="ranking">28</td>
+                              <td class="ranking_team">Phoenix Suns</td>
+                            </tr>
+                            <tr id="MEM" class="predict_table_row">
+                              <td class="ranking">29</td>
+                              <td class="ranking_team">Memphis Grizzlies</td>
+                            </tr>
+                            <tr id="LAC" class="predict_table_row">
+                              <td class="ranking">30</td>
+                              <td class="ranking_team">LA Clippers</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="col-md-5 mx-auto">
+                      <h4>Chance of Winning 2018 Championship</h4>
+                      <div id="perc_circle" class="mt-4"></div>
+                    </div>
                   </div>
-                </div>
-                <div class="col-md-5 mx-auto">
-                  <h4>Chance of Winning 2018 Championship</h4>
-                  <div id="perc_circle" class="mt-4"></div>
                 </div>
               </div>
 
@@ -315,7 +319,7 @@
                     <p id="team_fact"></p>
                   </div>
 
-                  <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
+                  <p class="lead">Please select a team above to view information about the team's leaders, various season statistics, and fun facts.</p>
                 </div>
               </div>
             </div>
@@ -328,14 +332,15 @@
           <section id="live">
             <div class="container-fluid text-center">
               <h1 class="mb-4">Live Playoff Scoreboard</h1>
-              <iframe class="col-md-12 mr-auto" src="/live" height="900" width="400" frameborder="0" scrolling="yes"></iframe>
+              <iframe class="col-md-12 mr-auto" src="/live" height="260" width="400" frameborder="0" scrolling="yes"></iframe>
+              <a class="twitter-timeline" data-width="400" data-height="600" data-theme="dark" href="https://twitter.com/sungwonb/lists/nba-tweets?ref_src=twsrc%5Etfw">Follow tweets covering the playoffs</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
             </div>
           </section>
 
         </div>
         <div id="contact_us" class="col-sm-12">
           <hr class="mt-0">
-          <section id="contact" class="">
+          <section id="contact">
             <div class="container">
               <div class="row">
                 <div class="col-md-8 mx-auto">
