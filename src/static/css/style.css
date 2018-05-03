@@ -187,6 +187,12 @@ hr {
 	left: 10%;
 }
 
+.card_profile {
+	position: absolute;
+	bottom: 15%;
+	right: 28%
+}
+
 .card_links {
 	position: absolute;
 	bottom: 2%;
