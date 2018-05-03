@@ -33,10 +33,46 @@
 
   <body id="page-top">
 
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="modal fade" id="myModal">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3>Machine Learning Model Working in the Background Creation</h3>
+                </div>
+                <div class="modal-body">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-md-10">
+                        <img src="../static/images/notebook_1.png" class="img-fluid">
+                        <img src="../static/images/notebook_2.png" class="img-fluid">
+                        <img src="../static/images/notebook_3.png" class="img-fluid">
+                      </div>
+                      <div class="col-md-2">
+                        <p>Here is a techincal breakdown of our <strong>Random Forest Classifier Model</strong>. We are using the lovely Python Scikit-Learn Module/Library to build this model. For further explanation please reach out to the <em>Creators</em> listed at the bottom of the page: <mark>Contact Us</mark>. Thank you!!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
     <!-- Navigation -->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="{{ url_for('static', filename='images/nba_logos/NBA_logo.png') }}"> NBA Forecaster</a>
+        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal">Behind the Scenes</button>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -67,7 +103,7 @@
     </video>
 
     <header id="selection" class="text-white">
-      <div id="team_buttons" class="container-fluid text-center">
+      <div id="team_buttons" class="container-fluid text-center pb-4">
         <div id="frontpage">
           <h1 class="font-weight-bold">NBA 2018 Champion Forecaster</h1>
           <h2>Who do you think will win?</h2>
@@ -400,10 +436,8 @@
                       <img class="card-img-top" src="../static/images/creator_profiles/victor.jpg" alt="Card image cap">
                       <div class="card-body text-dark">
                         <h5 class="card-title">V1ctor</h5>
-                        <p class="card-text mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat.</p>
+                        <p class="card-text mb-5">When not coding or analyzing data, I enjoy following the NBA. I am a Lakers fan and look forward to them getting back to the top soon!</p>
+                        <img class="img-thumbnail img-fluid card_profile" src="../static/images/creator_profiles/victor.png" height="100" width="100">
                         <p class="card-text card_links"><span class="text-muted"><a href="https://github.com/victoryk13" target="_blank"><i class="fab fa-github fa-3x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.linkedin.com/in/victor-kuo" target="_blank"><i class="fab fa-linkedin-in fa-3x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#"><i class="fas fa-home fa-3x"></i></a></span></p>
                       </div>
                     </div>
@@ -431,7 +465,7 @@
     <!-- Footer -->
     <footer id="feet" class="py-5 bg-dark">
       <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; The Three Datateers 2018</p>
+        <p class="m-0 text-center text-white">Copyright &copy; <a href="https://github.com/buitron/NBA_champion_forecaster" target="_blank">The Three Datateers 2018 <i class="fas fa-code-branch"></i></a></p>
       </div>
       <!-- /.container -->
     </footer>

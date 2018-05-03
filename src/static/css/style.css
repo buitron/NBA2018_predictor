@@ -181,6 +181,7 @@ hr {
 }
 
 #team_buttons {
+	background-color: rgba(0, 0, 0, 0.6);
 	position: absolute;
 	bottom: 10%;
 	width: 80%;
@@ -208,5 +209,9 @@ path.color0 {
 }
 path.color1 {
     fill: rgba(255,255,255,.3);
+}
+
+.card {
+	height: 70vh;
 }
 
