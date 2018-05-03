@@ -1,5 +1,12 @@
 var previousClass;
 
+
+// activate hover-messages using tooltip
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+
+
 jQuery(function ($) {
     $('.team_btn').click(function () {
 
@@ -12,18 +19,23 @@ jQuery(function ($) {
         	team_name: $(this).val()
         }, function(data) {
 
-            console.log(data.Conference)
+            console.log(data.Team.split(" ")[0])
 
             $('.lead').hide();
             $('#team_name').text(data.Team);
 
             $('#team_table').removeAttr('hidden');
             $('#playoff_seed').text(data['Playoff Seed']);
-            $('#conference').attr('src', '../static/images/nba_logos/' + data.Conference + '_logo.png');
 
+            $('#conference').attr('src', '../static/images/nba_logos/' + data.Conference + '_logo.png');
             $('#division').text(data.Division + " Division");
+
             $('#head_coach').text(data['Head Coach']);
+            $('#head_coach_img').attr('src', '../static/images/team_coaches/' + data.Team.split(" ")[1] + '.jpg');
+
             $('#star_player').text(data['Star Player']);
+            $('#star_player_img').attr('src', '../static/images/team_star/' + data.Team.split(" ")[1] + '.jpg');
+
             $('#rs_season_wins').text(data['Regular Season Wins']);
             $('#rs_season_losses').text(data['Regular Season Losses']);
             $('#win_percentage').text(data['Win Percentage']);
@@ -52,13 +64,21 @@ jQuery(function ($) {
             data['team_prediction'].forEach(function(element) {
                 counter ++;
 
-                if (element[3] == previousClass) {
-                    $('#champion').text(element[1]);
-                    $('#predict_perc').text(element[0]);
-                    $('#ranked').text(counter);
+                $('#team'+counter).text(element[2]);
 
-                    $('.predict_table').css({ 'font-size': '', 'font-weight': '', 'outline-style': '', 'outline-color': ''})
-                    $('#' + element[3]).css({ 'font-size': 14, 'font-weight': 800, 'outline-style': 'solid', 'outline-color': 'red'})
+                if (element[3] == previousClass) {
+
+                    if (element[4] == 1) {
+                        $('#team_name').text(element[2] + " (Winner!)");
+                    };
+
+                    $('.predict_table_row').css({ 'font-size': '', 'font-weight': '', 'outline-style': '', 'outline-color': ''});
+                    $('#row' + element[4]).css({ 'vertical-align': 'middle', 'font-size': 16, 'font-weight': 800, 'outline-style': 'solid', 'outline-color': 'red'});
+
+                    for (i=1; i<6; i++){
+                        $('#feature'+ i).text(data['feature_importance'][i-1][1]);
+                        $('#weight'+ i).text(Math.round(data['feature_importance'][i-1][0]*100)+'%');
+                    };
 
                     // d3 percent circle
 
@@ -69,7 +89,7 @@ jQuery(function ($) {
                         transition = 200,
                         percent = element[0] * 100,
                         width = window.innerWidth - 1230,
-                        height = window.innerHeight - 588;
+                        height = window.innerHeight - 500;
 
                     var dataset = {
                                 lower: calcPercent(0),
@@ -125,14 +145,8 @@ jQuery(function ($) {
                         return [percent, 100 - percent];
                     };
 
-
                 }
             })
         })
     })
 });
-
-$('#myModal').on('shown.bs.modal', function () {
-  $('#myInput').trigger('focus')
-})
-

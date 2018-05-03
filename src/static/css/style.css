@@ -1,3 +1,32 @@
+/*ranking table*/
+#ranking_table {
+	border-radius: 2;
+}
+
+.hover-tool {
+	color: inherit;
+}
+
+/*padding adjustments*/
+
+/*#about, #live {
+	padding-top: 150px;
+	padding-bottom: 50px;
+}
+
+#services {
+	padding-top: 75px;
+}
+
+#contact {
+	padding-top: 25px;
+}
+
+#twitterfeed {
+	padding-bottom: 150px;
+}*/
+
+
 /*team configurations*/
 
 #team.BOS {
@@ -135,7 +164,7 @@ body {
 }
 
 hr {
-	background-color: grey;
+	background-color: #808080;
 }
 
 #myVideo {
@@ -156,6 +185,12 @@ hr {
 	bottom: 10%;
 	width: 80%;
 	left: 10%;
+}
+
+.card_profile {
+	position: absolute;
+	bottom: 15%;
+	right: 28%
 }
 
 .card_links {
