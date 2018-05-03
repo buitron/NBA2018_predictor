@@ -9,7 +9,7 @@
 
 /*padding adjustments*/
 
-#about, #live {
+/*#about, #live {
 	padding-top: 150px;
 	padding-bottom: 50px;
 }
@@ -24,7 +24,7 @@
 
 #twitterfeed {
 	padding-bottom: 150px;
-}
+}*/
 
 
 /*team configurations*/
@@ -164,7 +164,7 @@ body {
 }
 
 hr {
-	background-color: grey;
+	background-color: #808080;
 }
 
 #myVideo {
