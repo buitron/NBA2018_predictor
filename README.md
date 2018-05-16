@@ -7,12 +7,12 @@
 
 # Objective
 
-Predict the NBA Championship Team for 2018 using a fine tuned Deep Learning Algorithm, and project it to the user on an easily digestable UI web application.
+Predict the NBA Championship Team for 2018 using a fine tuned Machine Learning Algorithm, and project it to the user on an easily digestable UI web application.
 
 
 # Background
 
-[NBA Stats info and years the data is collected]
+We scraped 21 years worth of regular season NBA team stats data, starting at 1997, from stats.nba.com, which we used as test features in our ML model. We also appended a boolean label column to this dataset with the winning or losing team for that particular season. With this data we were able to produce most of the hard working functionalities of this application, the rest is mumbo jumbo (for those that like that kinda stuff, we ain't judging).
 
 
 ## Step 1 - Data Gathering and Cleaning
@@ -39,16 +39,18 @@ We tested various ML algorithms for best fit. Random Forests proved to be the be
 
 ## Step 3 - Flask
 
-Used various
+The Python Flask Module allowed us to create multiple data API endpoints so that we could pull in both static and live data into our application. We also utilized a Flask + Jquery Javascript functionality that transformed our team labeled buttons into RESTful input POSTs. And then PRESTO, our app was born.
 
 
-## Step 4 - Application Build
+## Step 4 - Hosting
+
+This application is being hosted on Heroku. To veiw the app and possibly place a bet before the 2018 NBA series is over (disclosure: we aren't liable for any of your loses, gamble at your own discretion) - [*CLICK HERE*](https://nba-champion.herokuapp.com/) !
 
 
 # Sample Web-app
 
-<img src="images/webpage_1.png" alt="webpage image 1">
-<img src="images/webpage_2.png" alt="webpage image 2">
-<img src="images/webpage_3.png" alt="webpage image 3">
-<img src="images/webpage_4.png" alt="webpage image 4">
-<img src="images/webpage_5.png" alt="webpage image 5">
+![webpage image 1](images/webpage_1.png)
+![webpage image 2](images/webpage_2.png)
+![webpage image 3](images/webpage_3.png)
+![webpage image 4](images/webpage_4.png)
+![webpage image 5](images/webpage_5.png)
